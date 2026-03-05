@@ -1,17 +1,17 @@
 const QuoteSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-20 py-32">
-      <div className="max-w-4xl mx-auto text-center space-y-16">
+    <section className="min-h-screen flex items-center px-6 md:px-20 py-32">
+      <div className="max-w-6xl w-full space-y-16">
         <blockquote className="space-y-4">
-          <p className="font-georgia text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
+          <p className="text-display-xl tracking-tight text-foreground">
             Better Information
           </p>
-          <p className="font-georgia text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
+          <p className="text-display-xl tracking-tight text-foreground">
             Better Life
           </p>
         </blockquote>
 
-        <div className="w-16 h-px bg-muted-foreground/20 mx-auto" />
+        <div className="w-16 h-px bg-muted-foreground/20" />
 
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground uppercase">
           — A belief in the power of clarity
