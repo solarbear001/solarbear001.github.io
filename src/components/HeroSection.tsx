@@ -47,6 +47,7 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-12 flex flex-col items-center gap-2 animate-scroll-bounce">
+        <div className="w-px h-6 bg-muted-foreground/30" />
         <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">scroll</span>
         <div className="w-px h-6 bg-muted-foreground/30" />
       </div>
