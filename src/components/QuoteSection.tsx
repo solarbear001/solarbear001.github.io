@@ -3,10 +3,10 @@ const QuoteSection = () => {
     <section className="min-h-screen flex items-center justify-center px-6 md:px-20 py-32">
       <div className="max-w-4xl mx-auto text-center space-y-16">
         <blockquote className="space-y-4">
-          <p className="font-georgia text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
+          <p className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
             Better Information
           </p>
-          <p className="font-georgia text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
+          <p className="font-serif text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground uppercase">
             Better Life
           </p>
         </blockquote>
