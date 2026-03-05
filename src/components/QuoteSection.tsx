@@ -7,8 +7,6 @@ const QuoteSection = () => {
           <p className="text-display-xl tracking-tight text-foreground">Better</p>
           <p className="text-display-xl tracking-tight text-foreground">Life</p>
         </blockquote>
-
-        <div className="w-16 h-px bg-muted-foreground/20" />
       </div>
     </section>
   );
