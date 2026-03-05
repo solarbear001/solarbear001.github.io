@@ -22,13 +22,13 @@ const About = () => {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 pt-32 pb-24">
           <div className="max-w-3xl w-full space-y-16 text-center">
             <div className="space-y-4">
-              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-foreground uppercase">
+              <h1 className="text-display tracking-tight text-foreground">
                 Editor
               </h1>
-              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-foreground uppercase">
+              <h1 className="text-display tracking-tight text-foreground">
                 <span className="text-muted-foreground">&</span> OSINTer
               </h1>
-              <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-foreground uppercase">
+              <h1 className="text-display tracking-tight text-foreground">
                 Researcher
               </h1>
             </div>
@@ -61,7 +61,7 @@ const About = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="font-serif text-6xl md:text-8xl text-foreground/10 leading-none">
+                <span className="text-display text-foreground/10 leading-none">
                   I
                 </span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
@@ -138,7 +138,7 @@ const About = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="font-serif text-6xl md:text-8xl text-foreground/10 leading-none">
+                <span className="text-display text-foreground/10 leading-none">
                   S
                 </span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
@@ -179,7 +179,7 @@ const About = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="font-serif text-6xl md:text-8xl text-foreground/10 leading-none">
+                <span className="text-display text-foreground/10 leading-none">
                   A
                 </span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
@@ -216,7 +216,7 @@ const About = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="font-serif text-6xl md:text-8xl text-foreground/10 leading-none">
+                <span className="text-display text-foreground/10 leading-none">
                   P
                 </span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
@@ -250,10 +250,10 @@ const About = () => {
         {/* 7 — Artistic Footer */}
         <section className="min-h-[60vh] flex items-center justify-center px-6">
           <div className="text-center space-y-4">
-            <p className="font-serif text-4xl md:text-6xl tracking-tight text-foreground/20 italic leading-[1.2]">
+            <p className="text-display tracking-tight text-foreground/20 italic">
               Like a Daydream
             </p>
-            <p className="font-serif text-4xl md:text-6xl tracking-tight text-foreground/20 italic leading-[1.2]">
+            <p className="text-display tracking-tight text-foreground/20 italic">
               Or a Fever
             </p>
           </div>

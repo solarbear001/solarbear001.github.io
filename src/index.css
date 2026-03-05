@@ -83,6 +83,19 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+  .text-display {
+    font-size: 100px;
+    line-height: 1.05;
+    font-family: Georgia, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', '黑体', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-display {
+    font-size: 48px;
+  }
 }
 
 /* Scroll indicator animation */
