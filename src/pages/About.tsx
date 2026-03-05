@@ -56,9 +56,9 @@ const About = () => {
           </div>
         </section>
 
-        {/* 2 — Information Section */}
+        {/* 2 — Information Section — left-aligned */}
         <section className="px-6 md:px-20 py-32">
-          <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
                 <span className="text-display text-foreground/10 leading-none">
@@ -69,7 +69,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-7 md:col-start-4 space-y-12">
+            <div className="col-span-12 md:col-span-6 md:col-start-4 space-y-12">
               <div className="space-y-6">
                 <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
                   {t("about", "关于")}
@@ -93,15 +93,13 @@ const About = () => {
           </div>
         </section>
 
-        {/* 3 — Contact Section */}
+        {/* 3 — Contact Section — right-aligned */}
         <section className="px-6 md:px-20 py-24 border-t border-border">
-          <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
-            <div className="col-span-12 md:col-span-2">
-              <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-                {t("Get in touch", "联系方式")}
-              </p>
-            </div>
-            <div className="col-span-12 md:col-span-7 md:col-start-4 space-y-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-5 md:col-start-5 space-y-6">
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
+                {t("get in touch", "联系方式")}
+              </h3>
               <div className="flex items-center gap-4">
                 <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase w-20">
                   Email
@@ -130,12 +128,17 @@ const About = () => {
                 </a>
               </div>
             </div>
+            <div className="col-span-12 md:col-span-2 md:col-start-11 md:text-right">
+              <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
+                {t("Contact", "联络")}
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* 4 — Services / Skills */}
+        {/* 4 — Services / Skills — left-aligned */}
         <section className="px-6 md:px-20 py-32">
-          <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
                 <span className="text-display text-foreground/10 leading-none">
@@ -146,7 +149,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-7 md:col-start-4">
+            <div className="col-span-12 md:col-span-6 md:col-start-4">
               <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase mb-12">
                 {t("skills", "技能")}
               </h3>
@@ -174,20 +177,10 @@ const About = () => {
           </div>
         </section>
 
-        {/* 5 — Awards */}
+        {/* 5 — Awards — right-aligned */}
         <section className="px-6 md:px-20 py-32 border-t border-border">
-          <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
-            <div className="col-span-12 md:col-span-2">
-              <div className="sticky top-32">
-                <span className="text-display text-foreground/10 leading-none">
-                  A
-                </span>
-                <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
-                  {t("Awards", "荣誉")}
-                </p>
-              </div>
-            </div>
-            <div className="col-span-12 md:col-span-7 md:col-start-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-5 md:col-start-5">
               <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase mb-12">
                 {t("accomplishments", "成就")}
               </h3>
@@ -208,12 +201,22 @@ const About = () => {
                 ))}
               </ul>
             </div>
+            <div className="col-span-12 md:col-span-2 md:col-start-11 md:text-right">
+              <div className="sticky top-32">
+                <span className="text-display text-foreground/10 leading-none">
+                  A
+                </span>
+                <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
+                  {t("Awards", "荣誉")}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* 6 — Press */}
+        {/* 6 — Press — left-aligned */}
         <section className="px-6 md:px-20 py-32">
-          <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
                 <span className="text-display text-foreground/10 leading-none">
@@ -224,7 +227,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-7 md:col-start-4">
+            <div className="col-span-12 md:col-span-6 md:col-start-4">
               <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase mb-12">
                 {t("interviews / events", "采访 / 活动")}
               </h3>
