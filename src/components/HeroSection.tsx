@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Central image with text overlay */}
       <div className="relative w-[480px] max-w-[90vw] aspect-square">
         <img
-          src="https://www.bellingcat.com/app/uploads/2026/03/Screenshot-2026-03-04-at-14.37.14-300x180.jpg"
+          src="https://cdn.sanity.io/images/hvd5n54p/production/a40ad54ca387cb903eaec29f93def4e2055bc566-6800x5100.jpg?w=1200&fm=webp"
           alt="Editorial portrait"
           className="w-full h-full object-cover grayscale"
         />
