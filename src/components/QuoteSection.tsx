@@ -4,10 +4,8 @@ const QuoteSection = () => {
       <div className="max-w-6xl w-full space-y-16">
         <blockquote className="space-y-4">
           <p className="text-display-xl tracking-tight text-foreground">Better Information</p>
-          <p className="text-display-xl tracking-tight text-foreground">Better</p>
-          <p className="text-display-xl tracking-tight text-foreground">Brain</p>
-          <p className="text-display-xl tracking-tight text-foreground">Better</p>
-          <p className="text-display-xl tracking-tight text-foreground">Life</p>
+          <p className="text-display-xl tracking-tight text-foreground">Better Brain</p>
+          <p className="text-display-xl tracking-tight text-foreground">Better Life</p>
         </blockquote>
       </div>
     </section>

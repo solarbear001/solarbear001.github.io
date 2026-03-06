@@ -22,35 +22,26 @@ const About = () => {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 pt-32 pb-24">
           <div className="max-w-3xl w-full space-y-16 text-center">
             <div className="space-y-4">
-              <h1 className="text-display tracking-tight text-foreground">
-                Editor
-              </h1>
+              <h1 className="text-display tracking-tight text-foreground">Editor</h1>
               <h1 className="text-display tracking-tight text-foreground">
                 <span className="text-muted-foreground">&</span> OSINTer
               </h1>
-              <h1 className="text-display tracking-tight text-foreground">
-                Researcher
-              </h1>
+              <h1 className="text-display tracking-tight text-foreground">Investigator</h1>
             </div>
 
             <div className="w-40 h-40 md:w-52 md:h-52 mx-auto overflow-hidden rounded-full">
-              <img
-                src={avatarImg}
-                alt="Shujing Zheng"
-                className="w-full h-full object-cover grayscale"
-              />
+              <img src={avatarImg} alt="Shujing Zheng" className="w-full h-full object-cover grayscale" />
             </div>
 
             <div className="space-y-6">
               <p className="font-sans text-sm md:text-base tracking-wide text-muted-foreground leading-relaxed max-w-lg mx-auto">
                 {t(
-                  "Driven by a spirit of curiosity, her interests encompass language arts, literature, visual design, film and music.",
-                  "出于好奇心的驱使，她的兴趣涵盖语言艺术、文学、视觉设计、电影和音乐。"
+                  "Skilled in visual investigation, her interests encompass cutting-edge technology, geoeconomies and geopolitical conflicts.",
+                  "善于视觉调查，关注前沿科技与地缘政治、经济的冲突领域。",
                 )}
               </p>
               <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground uppercase">
-                {t("Based in", "现居")}{" "}
-                <span className="text-foreground">{t("Shanghai", "上海")}</span>
+                {t("Based in", "现居")} <span className="text-foreground">{t("Shanghai", "上海")}</span>
               </p>
             </div>
           </div>
@@ -61,9 +52,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="text-display text-foreground/10 leading-none">
-                  I
-                </span>
+                <span className="text-display text-foreground/10 leading-none">I</span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                   {t("Information", "信息")}
                 </p>
@@ -78,13 +67,13 @@ const About = () => {
                   <p>
                     {t(
                       "Shujing Zheng is an editor and open-source intelligence researcher with a background in international communication and visual storytelling. Her work sits at the intersection of investigative journalism, digital media, and creative strategy.",
-                      "郑淑静是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。"
+                      "郑淑静是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。",
                     )}
                   </p>
                   <p>
                     {t(
                       "She is interested in digital experience, branding, creative strategy, and visual identity — exploring how information shapes understanding and how design communicates truth.",
-                      "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。"
+                      "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
                     )}
                   </p>
                 </div>
@@ -101,9 +90,7 @@ const About = () => {
                 {t("get in touch", "联系方式")}
               </h3>
               <div className="flex items-center gap-4">
-                <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase w-20">
-                  Email
-                </span>
+                <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase w-20">Email</span>
                 <button
                   onClick={copyEmail}
                   className="font-mono text-xs tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors duration-300"
@@ -141,9 +128,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="text-display text-foreground/10 leading-none">
-                  S
-                </span>
+                <span className="text-display text-foreground/10 leading-none">S</span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                   {t("Services", "技能")}
                 </p>
@@ -203,9 +188,7 @@ const About = () => {
             </div>
             <div className="col-span-12 md:col-span-2 md:col-start-11 md:text-right">
               <div className="sticky top-32">
-                <span className="text-display text-foreground/10 leading-none">
-                  A
-                </span>
+                <span className="text-display text-foreground/10 leading-none">A</span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                   {t("Awards", "荣誉")}
                 </p>
@@ -219,9 +202,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-2">
               <div className="sticky top-32">
-                <span className="text-display text-foreground/10 leading-none">
-                  P
-                </span>
+                <span className="text-display text-foreground/10 leading-none">P</span>
                 <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                   {t("Press", "媒体")}
                 </p>
@@ -253,12 +234,8 @@ const About = () => {
         {/* 7 — Artistic Footer */}
         <section className="min-h-[60vh] flex items-center justify-center px-6">
           <div className="text-center space-y-4">
-            <p className="text-display tracking-tight text-foreground/20 italic">
-              Like a Daydream
-            </p>
-            <p className="text-display tracking-tight text-foreground/20 italic">
-              Or a Fever
-            </p>
+            <p className="text-display tracking-tight text-foreground/20 italic">Like a Daydream</p>
+            <p className="text-display tracking-tight text-foreground/20 italic">Or a Fever</p>
           </div>
         </section>
       </main>
