@@ -67,7 +67,7 @@ const About = () => {
                   <p>
                     {t(
                       "Shujing Zheng is an editor and open-source intelligence researcher with a background in international communication and visual storytelling. Her work sits at the intersection of investigative journalism, digital media, and creative strategy.",
-                      "郑淑静是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。",
+                      "郑淑婧是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。",
                     )}
                   </p>
                   <p>
@@ -78,47 +78,6 @@ const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 3 — Contact Section — right-aligned */}
-        <section className="px-6 md:px-20 py-24 border-t border-border">
-          <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
-            <div className="col-span-12 md:col-span-5 md:col-start-5 space-y-6">
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
-                {t("get in touch", "联系方式")}
-              </h3>
-              <div className="flex items-center gap-4">
-                <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase w-20">Email</span>
-                <button
-                  onClick={copyEmail}
-                  className="font-mono text-xs tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors duration-300"
-                >
-                  hello@shujingzheng.com
-                  <span className="ml-2 text-muted-foreground text-[10px]">
-                    {copied ? t("✓ copied", "✓ 已复制") : t("↗ copy", "↗ 复制")}
-                  </span>
-                </button>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase w-20">
-                  LinkedIn
-                </span>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors duration-300"
-                >
-                  linkedin.com/in/shujingzheng ↗
-                </a>
-              </div>
-            </div>
-            <div className="col-span-12 md:col-span-2 md:col-start-11 md:text-right">
-              <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-                {t("Contact", "联络")}
-              </p>
             </div>
           </div>
         </section>
@@ -147,6 +106,7 @@ const About = () => {
                   { en: "Hosting / Event / Interview / Writing", zh: "主持 / 会务 / 采访 / 写作" },
                   { en: "English Working Language", zh: "英语工作语言" },
                   { en: "Social Media & Website Operations", zh: "社媒与网站运营" },
+                  { en: "Media Literacy", zh: "媒介素养教育" },
                   { en: "AIGC", zh: "AIGC" },
                   { en: "CFA Level Ⅰ", zh: "CFA Level Ⅰ" },
                 ].map((skill, i) => (
@@ -171,10 +131,10 @@ const About = () => {
               </h3>
               <ul className="space-y-5">
                 {[
-                  { en: "Awwwards SOTD ×10", zh: "Awwwards 每日最佳网站 ×10" },
+                  { en: "Awwwards SOTD ×10", zh: "上海新闻奖 ×10" },
                   { en: "Silver Pigeon Award ×2", zh: "银鸽奖 ×2" },
                   { en: "Best International Communication Work ×3", zh: "最佳国际传播作品奖 ×3" },
-                  { en: "CSSDA ×3", zh: "CSSDA ×3" },
+                  { en: "CSSDA ×3", zh: "三八妇女红旗手优秀集体" },
                 ].map((award, i) => (
                   <li
                     key={i}
@@ -234,8 +194,8 @@ const About = () => {
         {/* 7 — Artistic Footer */}
         <section className="min-h-[60vh] flex items-center justify-center px-6">
           <div className="text-center space-y-4">
-            <p className="text-display tracking-tight text-foreground/20 italic">Like a Daydream</p>
-            <p className="text-display tracking-tight text-foreground/20 italic">Or a Fever</p>
+            <p className="text-display tracking-tight text-foreground/20 italic">Information Quality Matters</p>
+            <p className="text-display tracking-tight text-foreground/20 italic">Fact Matters</p>
           </div>
         </section>
       </main>
