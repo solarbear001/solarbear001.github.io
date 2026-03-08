@@ -168,7 +168,13 @@ const About = () => {
                 </p>
                 <p>
                   {t(
-                    "— - Strong understanding of media landscape and news production. Delivered media literacy lectures at multiple universities including ZJU and SISU. ",
+                    "— Strong understanding of media landscape and news production. Delivered media literacy lectures at multiple universities including ZJU and SISU. ",
+                    "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "— Proven teamwork skills. Had experience in attending, planning, organizing and hosting global conferences. ",
                     "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
                   )}
                 </p>
