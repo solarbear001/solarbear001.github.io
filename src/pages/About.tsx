@@ -117,7 +117,10 @@ const About = () => {
             {/* Small text — centered */}
             <div className="text-center py-8 md:py-12">
               <p className="font-sans text-sm md:text-base tracking-wide text-muted-foreground leading-[2]">
-                {t("Based in Shanghai", "现居上海")}
+                {t(
+                  "Heavy user of artificial intelligence, agents lover,  great interest in AIGC detection and enhancement.",
+                  "人工智能重度使用者，智能助手爱好者，对AIGC检测与增强抱有浓厚兴趣。",
+                )}
               </p>
             </div>
 
