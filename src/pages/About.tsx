@@ -22,11 +22,11 @@ const About = () => {
         <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 pt-32 pb-24">
           <div className="max-w-3xl w-full space-y-16 text-center">
             <div className="space-y-4">
-              <h1 className="text-display tracking-tight text-foreground">Editor</h1>
+              <h1 className="text-display tracking-tight text-foreground">INTERNATIONAL DESK SENIOR EDITOR</h1>
               <h1 className="text-display tracking-tight text-foreground">
-                <span className="text-muted-foreground">&</span> OSINTer
+                FACT CHECKER SKILLED IN VISUAL INVESTIGATION
               </h1>
-              <h1 className="text-display tracking-tight text-foreground">Investigator</h1>
+              <h1 className="text-display tracking-tight text-foreground">AIGC EXPLORER</h1>
             </div>
 
             <div className="w-40 h-40 md:w-52 md:h-52 mx-auto overflow-hidden rounded-full">
@@ -46,23 +46,7 @@ const About = () => {
             </div>
           </div>
         </section>
-
-  const QuoteSection = () => {
-  return (
-    <section className="min-h-screen flex items-center px-6 md:px-20 py-32">
-      <div className="max-w-6xl w-full space-y-16">
-        <blockquote className="space-y-4">
-          <p className="text-display-xl tracking-tight text-foreground">Better Information</p>
-          <p className="text-display-xl tracking-tight text-foreground">Better Brain</p>
-          <p className="text-display-xl tracking-tight text-foreground">Better Life</p>
-        </blockquote>
-      </div>
-    </section>
-  );
-};
-
-export default QuoteSection;
-
+        export default QuoteSection;
         {/* 2 — Information Section — left-aligned */}
         <section className="px-6 md:px-20 py-32">
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
@@ -97,7 +81,6 @@ export default QuoteSection;
             </div>
           </div>
         </section>
-
         {/* 4 — Services / Skills — left-aligned */}
         <section className="px-6 md:px-20 py-32">
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
@@ -137,7 +120,6 @@ export default QuoteSection;
             </div>
           </div>
         </section>
-
         {/* 5 — Awards — right-aligned */}
         <section className="px-6 md:px-20 py-32 border-t border-border">
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
@@ -172,7 +154,6 @@ export default QuoteSection;
             </div>
           </div>
         </section>
-
         {/* 6 — Press — left-aligned */}
         <section className="px-6 md:px-20 py-32">
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
@@ -206,7 +187,6 @@ export default QuoteSection;
             </div>
           </div>
         </section>
-
         {/* 7 — Artistic Footer */}
         <section className="min-h-[60vh] flex items-center justify-center px-6">
           <div className="text-center space-y-4">
