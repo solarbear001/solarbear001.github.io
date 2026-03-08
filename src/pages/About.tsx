@@ -47,7 +47,7 @@ const About = () => {
         <section className="relative min-h-screen flex flex-col items-center justify-center px-6">
           <div className="relative w-[480px] max-w-[90vw] aspect-square">
             <img
-              src="https://inews.gtimg.com/om_bt/OkRbt3HlugGC3ly0hmskk3aqPR81NfCvNS0CaSpOZ04hsAA/0"
+              src="https://www.nationalgalleries.org/art-and-artists/23996"
               alt="Shujing Zheng"
               className="w-full h-full object-cover grayscale"
             />
