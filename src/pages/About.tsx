@@ -102,7 +102,7 @@ const About = () => {
             <div className="text-center py-8 md:py-12">
               <p className="font-sans text-sm md:text-base tracking-wide text-muted-foreground leading-[2] max-w-xl mx-auto">
                 {t(
-                  "Skilled in visual investigation, her interests encompass cutting-edge technology, geoeconomies and geopolitical conflicts.",
+                  "Skilled in visual investigation, her works focus on cutting-edge technology, geoeconomies and geopolitical conflicts.",
                   "善于视觉调查，关注前沿科技与地缘政治、经济的冲突领域。",
                 )}
               </p>
@@ -156,7 +156,13 @@ const About = () => {
                 </p>
                 <p>
                   {t(
-                    "She is interested in digital experience, branding, creative strategy, and visual identity — exploring how information shapes understanding and how design communicates truth.",
+                    "She is a Heavy user of artificial intelligence, agents lover, her kill skills encompasses: ",
+                    "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "— exploring how information shapes understanding and how design communicates truth.",
                     "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
                   )}
                 </p>
