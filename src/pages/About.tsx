@@ -156,7 +156,7 @@ const About = () => {
                 </p>
                 <p>
                   {t(
-                    "She is a Heavy user of artificial intelligence, agents lover, her kill skills encompasses: ",
+                    "She is a Heavy user of artificial intelligence, agents lover, her key skills encompasses: ",
                     "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
                   )}
                 </p>
