@@ -60,18 +60,11 @@ const About = () => {
                   <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30">ABOUT</span>
                 </div>
                 <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-justify leading-relaxed">
-                  editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
+                  writer&nbsp;&nbsp;editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
                 </p>
               </div>
 
-              <div className="space-y-2 text-center">
-                <p className="font-georgia text-lg md:text-xl tracking-[0.15em] text-foreground uppercase">
-                  {t("Shujing Zheng", "郑淑婧")}
-                </p>
-                <p className="font-georgia text-lg md:text-xl tracking-[0.15em] text-foreground uppercase">
-                  {t("International Desk", "国际新闻部")}
-                </p>
-              </div>
+              <div className="space-y-2 text-center"></div>
 
               <div className="space-y-1">
                 <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-right">
