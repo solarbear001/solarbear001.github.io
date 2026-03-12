@@ -1,17 +1,10 @@
 import { useState } from "react";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
-import work5 from "@/assets/work-5.jpg";
+import { Link } from "react-router-dom";
+import { workArticles, featuredWorkSlugs } from "@/data/articles";
 
-const projects = [
-  { id: 1, title: "Shadow Archives", category: "Investigation", image: work1 },
-  { id: 2, title: "Night Walker", category: "Documentary", image: work2 },
-  { id: 3, title: "Press Fragments", category: "OSINT", image: work3 },
-  { id: 4, title: "Empty Rooms", category: "Visual Essay", image: work4 },
-  { id: 5, title: "City Noir", category: "Photography", image: work5 },
-];
+const featured = featuredWorkSlugs.map(
+  (slug) => workArticles.find((a) => a.slug === slug)!
+);
 
 const FeaturedWork = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -26,34 +19,33 @@ const FeaturedWork = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
-        {projects.map((project) => (
-          <a
-            key={project.id}
-            href={`/work/${project.id}`}
+        {featured.map((project, i) => (
+          <Link
+            key={project.slug}
+            to={`/work/${project.slug}`}
             className="group relative aspect-[3/4] overflow-hidden cursor-pointer"
-            onMouseEnter={() => setHoveredId(project.id)}
+            onMouseEnter={() => setHoveredId(i)}
             onMouseLeave={() => setHoveredId(null)}
           >
             <img
               src={project.image}
-              alt={project.title}
+              alt={project.titleEn}
               className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
             />
             
-            {/* Hover overlay */}
             <div
               className={`absolute inset-0 bg-background/70 flex flex-col items-center justify-center transition-opacity duration-500 ${
-                hoveredId === project.id ? "opacity-100" : "opacity-0"
+                hoveredId === i ? "opacity-100" : "opacity-0"
               }`}
             >
               <p className="font-serif text-sm md:text-base tracking-[0.1em] text-foreground uppercase">
-                {project.title}
+                {project.titleEn}
               </p>
               <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground mt-2 uppercase">
                 {project.category}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
