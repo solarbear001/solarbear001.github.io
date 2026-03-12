@@ -3,17 +3,38 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getArticleBySlug } from "@/data/articles";
+import { useMemo } from "react";
 
 // ============================================================
 // 📝 ARTICLE PAGE TEMPLATE
 // To edit article content, go to: src/data/articles.ts
 // Each article's `contentEn` and `contentZh` arrays hold body paragraphs.
+// `inlineImages` array holds images inserted randomly in the body.
 // ============================================================
 
 const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useLanguage();
   const article = slug ? getArticleBySlug(slug) : undefined;
+
+  // Determine where to insert inline images (deterministic based on slug)
+  const imageInsertPositions = useMemo(() => {
+    if (!article?.inlineImages || article.inlineImages.length === 0) return [];
+    const contentLen = Math.max(article.contentEn.length, article.contentZh.length);
+    if (contentLen <= 2) return [1];
+    
+    // Use slug hash to create deterministic "random" positions
+    const hash = (article.slug || "").split("").reduce((a, c) => a + c.charCodeAt(0), 0);
+    const positions: number[] = [];
+    
+    for (let i = 0; i < article.inlineImages.length; i++) {
+      // Place images roughly evenly through article, offset by hash
+      const segment = Math.floor(contentLen / (article.inlineImages.length + 1));
+      const pos = Math.min(segment * (i + 1) + (hash % 2), contentLen - 1);
+      if (!positions.includes(pos)) positions.push(pos);
+    }
+    return positions;
+  }, [article]);
 
   if (!article) {
     return (
@@ -36,6 +57,42 @@ const ArticlePage = () => {
 
   const backPath = article.type === "work" ? "/work" : "/blog";
   const backLabel = article.type === "work" ? t("Work", "作品") : t("Blog", "博客");
+  const paragraphs = t(article.contentEn.join("|||"), article.contentZh.join("|||")).split("|||");
+
+  // Build content elements with inline images inserted
+  const contentElements: React.ReactNode[] = [];
+  let imageIdx = 0;
+
+  paragraphs.forEach((paragraph, i) => {
+    contentElements.push(
+      <p
+        key={`p-${i}`}
+        className="font-article-body text-base md:text-lg text-foreground/85 leading-[1.9] tracking-wide"
+      >
+        {paragraph}
+      </p>
+    );
+
+    // Check if we should insert an image after this paragraph
+    if (
+      article.inlineImages &&
+      imageIdx < article.inlineImages.length &&
+      imageInsertPositions.includes(i)
+    ) {
+      contentElements.push(
+        <figure key={`img-${i}`} className="my-10">
+          <div className="overflow-hidden">
+            <img
+              src={article.inlineImages[imageIdx]}
+              alt={`${t(article.titleEn, article.titleZh)} — illustration ${imageIdx + 1}`}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </figure>
+      );
+      imageIdx++;
+    }
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -103,17 +160,10 @@ const ArticlePage = () => {
           <div className="w-full h-px bg-border" />
         </div>
 
-        {/* Article Body */}
+        {/* Article Body with inline images */}
         <section className="px-6 md:px-20 py-16">
           <div className="max-w-3xl mx-auto space-y-6">
-            {(t(article.contentEn.join("|||"), article.contentZh.join("|||"))).split("|||").map((paragraph, i) => (
-              <p
-                key={i}
-                className="font-article-body text-base md:text-lg text-foreground/85 leading-[1.9] tracking-wide"
-              >
-                {paragraph}
-              </p>
-            ))}
+            {contentElements}
           </div>
         </section>
 

@@ -3,6 +3,16 @@ import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
+import blog1 from "@/assets/blog-1.jpg";
+import blog2 from "@/assets/blog-2.jpg";
+import blog3 from "@/assets/blog-3.jpg";
+import blog4 from "@/assets/blog-4.jpg";
+import blog5 from "@/assets/blog-5.jpg";
+import blog6 from "@/assets/blog-6.jpg";
+import blogInline1 from "@/assets/blog-inline-1.jpg";
+import blogInline2 from "@/assets/blog-inline-2.jpg";
+import blogInline3 from "@/assets/blog-inline-3.jpg";
+import blogInline4 from "@/assets/blog-inline-4.jpg";
 
 export interface Article {
   slug: string;
@@ -18,6 +28,8 @@ export interface Article {
   creditsEn?: string;
   creditsZh?: string;
   image?: string;
+  /** Inline images to insert within article body */
+  inlineImages?: string[];
   externalLink?: string;
   // ============================================================
   // 📝 ARTICLE CONTENT — Edit here to change article body text
@@ -253,6 +265,8 @@ export const blogArticles: Article[] = [
     descZh: "为什么这些检测器不可信？",
     dateEn: "March 2026",
     dateZh: "2026年3月",
+    image: blog1,
+    inlineImages: [blogInline1],
     contentEn: [
       "Open-source intelligence has undergone a remarkable transformation in the past decade. What began as a niche practice among security analysts and hobbyist investigators has evolved into one of the most powerful tools in modern journalism's arsenal.",
       "The proliferation of publicly available satellite imagery, social media data, corporate registries, and government databases has created an unprecedented landscape for investigative work. Tools like Google Earth, Sentinel Hub, and various social media analysis platforms have democratized access to information that was once the exclusive domain of intelligence agencies.",
@@ -264,8 +278,8 @@ export const blogArticles: Article[] = [
       "《纽约时报》在2月底发布了一篇AI测试文章，对市面上10多款主流的AI检测工具识别AI生成图像和音视频的能力进行了测试。文章指出，尽管AI进步神速，但目前你还不能指望依靠AI检测工具来判断图像的真伪。",
       "这一结论与我们去年年底的观察基本一致：尽管学术界提出了许多检测方法，也不断有新论文发表，但在现实应用中，没有任何一款工具是完美的。",
       "一些工具的检测结果相对准确，并具备对多模态内容（图像、视频、音频）的识别能力，例如Gemini Pro和AI or Not。Sensity和Hive Detect的表现也算得上差强人意。但一些主流商业大模型，例如Claude和ChatGPT，在判断图像真伪方面的表现反而未达预期。",
-      "这其中最令人费解的是Claude的表现——考虑到这是一款如此强调伦理的模型。但创造它的人好像完全没有考虑要让模型分辨得清真假这件事。我知道这款模型在代码方面的能力表现出色，但AI的表现再次证明，模型的能力有不同的维度。在为数不多的8类真假图片测试中，Claude仅通过了“真实拍摄的图片（非AI生成）”这一项，其余的内容，不是判断错误，就表示无法检测。",
-      "Claude在1月更新了它的constitution，强调要保持诚实并造福用户。我好奇，他们是否会将AI的核假能力作为指标纳入“诚实”的范畴。",
+      "这其中最令人费解的是Claude的表现——考虑到这是一款如此强调伦理的模型。但创造它的人好像完全没有考虑要让模型分辨得清真假这件事。我知道这款模型在代码方面的能力表现出色，但AI的表现再次证明，模型的能力有不同的维度。在为数不多的8类真假图片测试中，Claude仅通过了\"真实拍摄的图片（非AI生成）\"这一项，其余的内容，不是判断错误，就表示无法检测。",
+      "Claude在1月更新了它的constitution，强调要保持诚实并造福用户。我好奇，他们是否会将AI的核假能力作为指标纳入\"诚实\"的范畴。",
       "Gemini的表现要比Claude强得多。眼下一个更值得思考的问题是：为什么同样是AI模型，有些工具在识别AI生成内容方面的表现明显优于另一些？",
       "要回答这个问题，需要先理解这些AI检测工具是如何工作的。",
       "目前，大多数AI检测工具采用的是空域分析结合频域分析（frequency domain analysis）的技术路径。其核心思路是：真实图像与AI生成图像在频谱结构上存在差异。通过提取这些频谱特征，并训练一个二分类模型，就可以对图像进行真假判断。",
@@ -287,12 +301,12 @@ export const blogArticles: Article[] = [
       "为了应对这些问题，C2PA的成员正在开发更严格的内容溯源技术，以加强对篡改行为的防护。但无论如何，现阶段，水印还不能成为万能解决方案。",
       "就当下的AIGC技术进展而言，除了频域分析和水印技术之外，图像本身及其场外信息仍然是重要的判断依据，而且有时甚至比算法更直接。",
       "这些信息包括图像的内容是否符合解剖学和物理学规律，是否符合地理与社会背景，图像的来源与传播路径是否有AI痕迹、文件命名方式和元数据等是否能透露出AIGC模型的信息等等。这些也是专业事实核查员长期使用的技术路径。",
-      "Gemini 3 Pro能够具备较为准确的图像识别能力，或许和它借鉴了这些技术路径有关。比如它可以注意到细微的AI视觉痕迹，诸如不符合物理规律的物体、异常光滑的“AI皮肤”等。同时，它还可以识别生成式AI常见的文件命名方式、可见水印，甚至一些AI应用添加的图标标记。",
+      "Gemini 3 Pro能够具备较为准确的图像识别能力，或许和它借鉴了这些技术路径有关。比如它可以注意到细微的AI视觉痕迹，诸如不符合物理规律的物体、异常光滑的\"AI皮肤\"等。同时，它还可以识别生成式AI常见的文件命名方式、可见水印，甚至一些AI应用添加的图标标记。",
       "尽管如此，我还是认为，无论AI检测工具如何发展，人类都不应该把判断真伪的最终决定权完全交给机器。",
       "因为工具无法做到100%准确，也就不可能100%可信。倘若人们全然依赖工具的判断，那不仅会导致独立思考能力的丧失，还可能制造冤假错案、导致信任危机。",
-      "这并非杞人忧天。Reddit上曾出现过一个案例：有人花了几个小时撰写奖学金申请文，满怀希望提交后，却被系统标记为“AI生成”。没有证据，也没有解释，只有一个冷冰冰的自动标签——“你的内容不是真的”。",
-      "类似的情况可能出现在所有内容创作领域。人们可能因为“写得太好”或“风格太明显”，而被怀疑使用AI。与此同时，生成式AI却可能凭借效率优势迅速占领内容生产领域。写作、绘画、编程、影视、音乐、视觉设计，都可能被AI深度介入。",
-      "使用AI辅助创作本身并没有问题，但问题在于：我们能够接受到什么程度？我们是否愿意生活在一个信息来源模糊、所有内容都只有“90%概率是AI生成”的世界？",
+      "这并非杞人忧天。Reddit上曾出现过一个案例：有人花了几个小时撰写奖学金申请文，满怀希望提交后，却被系统标记为\"AI生成\"。没有证据，也没有解释，只有一个冷冰冰的自动标签——\"你的内容不是真的\"。",
+      "类似的情况可能出现在所有内容创作领域。人们可能因为\"写得太好\"或\"风格太明显\"，而被怀疑使用AI。与此同时，生成式AI却可能凭借效率优势迅速占领内容生产领域。写作、绘画、编程、影视、音乐、视觉设计，都可能被AI深度介入。",
+      "使用AI辅助创作本身并没有问题，但问题在于：我们能够接受到什么程度？我们是否愿意生活在一个信息来源模糊、所有内容都只有\"90%概率是AI生成\"的世界？",
       "至少，人类应当拥有识别内容创作者的能力，避免信息生产被少数技术主体垄断。但关键问题仍然是：How？",
       "这或许不仅仅是AI检测工具需要解决的问题，而是整个时代留给人类社会的一道难题。",
     ],
@@ -309,6 +323,8 @@ export const blogArticles: Article[] = [
     descZh: "探索电影片名设计、编辑版式与当代视觉识别系统的交汇点。",
     dateEn: "February 2026",
     dateZh: "2026年2月",
+    image: blog2,
+    inlineImages: [blogInline2],
     contentEn: [
       "The title sequence exists in a liminal space — neither fully part of the film nor entirely separate from it. It is a threshold, a moment of anticipation where typography becomes cinema and letterforms take on the weight of narrative.",
       "From Saul Bass's revolutionary work on Vertigo and Anatomy of a Murder to the digital experimentation of contemporary designers, film typography has served as a laboratory for pushing the boundaries of what letters can do.",
@@ -333,6 +349,8 @@ export const blogArticles: Article[] = [
     descZh: "关于不可翻译性和跨文化交流的诗学。一篇个人随笔。",
     dateEn: "January 2026",
     dateZh: "2026年1月",
+    image: blog3,
+    inlineImages: [blogInline3],
     contentEn: [
       "There are words that refuse to cross borders. The Japanese 木漏れ日 (komorebi) — sunlight filtering through leaves — has no single English equivalent. The Portuguese saudade carries a weight of longing that 'nostalgia' only approximates. These linguistic gaps are not failures of language but revelations of cultural perception.",
       "Translation, at its best, is not a mechanical transfer of meaning but an act of creative interpretation. The translator must inhabit two worlds simultaneously, feeling the texture of each language while building bridges between them.",
@@ -358,6 +376,8 @@ export const blogArticles: Article[] = [
     descZh: "当信息设计变成叙事——关于为复杂数据集构建视觉系统的反思。",
     dateEn: "December 2025",
     dateZh: "2025年12月",
+    image: blog4,
+    inlineImages: [blogInline1, blogInline4],
     contentEn: [
       "Every dataset tells a story, but not every visualization reveals it. The challenge of data narrative is not merely technical — it's editorial. What do you include? What do you leave out? Where do you direct the viewer's attention?",
       "The most compelling data visualizations share qualities with great journalism: they have a clear point of view, they respect their audience's intelligence, and they reveal something that wasn't obvious before.",
@@ -380,6 +400,8 @@ export const blogArticles: Article[] = [
     descZh: "批判性审视媒体平台如何大规模地制造理解——和误解。",
     dateEn: "November 2025",
     dateZh: "2025年11月",
+    image: blog5,
+    inlineImages: [blogInline1],
     contentEn: [
       "In an age of algorithmic curation, clarity itself has become a manufactured product. Social media platforms don't just distribute information — they shape how we understand it, through framing, sequencing, and the subtle architecture of attention.",
       "The paradox of modern media is that we have more access to information than ever before, yet feel less certain about what is true. This is not accidental — it is a structural feature of platforms designed to maximize engagement rather than understanding.",
@@ -402,6 +424,8 @@ export const blogArticles: Article[] = [
     descZh: "关于一座不断变化的城市的声音与视觉质地的田野笔记。",
     dateEn: "October 2025",
     dateZh: "2025年10月",
+    image: blog6,
+    inlineImages: [blogInline4],
     contentEn: [
       "Shanghai speaks in frequencies. The low hum of construction that never ceases. The staccato rhythm of mahjong tiles in lane houses. The digital chime of Alipay transactions echoing through convenience stores at 3 AM.",
       "This city resists documentation even as it demands it. Every photograph is already obsolete by the time it's taken — the building behind you might be gone next month, replaced by something taller, shinier, more aligned with whatever vision is currently ascendant.",
