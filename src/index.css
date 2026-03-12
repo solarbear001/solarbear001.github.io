@@ -48,6 +48,8 @@
     --font-serif: "Playfair Display", Georgia, serif;
     --font-mono: "Space Mono", "Courier New", monospace;
     --font-sans: "Inter", -apple-system, sans-serif;
+    --font-article-heading: "Sora", -apple-system, sans-serif;
+    --font-article-body: "Source Sans 3", "Source Sans Pro", Georgia, serif;
   }
 }
 
