@@ -38,7 +38,8 @@ export const workArticles: Article[] = [
     category: "Visual Investigation",
     titleEn: "Freshman",
     titleZh: "新人",
-    descEn: "An investigative documentary exploring grassroots journalism in the digital age. Visual storytelling meets data-driven research.",
+    descEn:
+      "An investigative documentary exploring grassroots journalism in the digital age. Visual storytelling meets data-driven research.",
     descZh: "一部探索数字时代草根新闻业的调查纪录片。视觉叙事与数据驱动研究的结合。",
     dateEn: "January 2026",
     dateZh: "2026年1月",
@@ -63,7 +64,8 @@ export const workArticles: Article[] = [
     category: "OSINT",
     titleEn: "Savor",
     titleZh: "品味",
-    descEn: "Open-source intelligence research project tracking supply chain transparency across Southeast Asian markets.",
+    descEn:
+      "Open-source intelligence research project tracking supply chain transparency across Southeast Asian markets.",
     descZh: "追踪东南亚市场供应链透明度的开源情报研究项目。",
     dateEn: "March 2026",
     dateZh: "2026年3月",
@@ -88,7 +90,8 @@ export const workArticles: Article[] = [
     category: "International Communication",
     titleEn: "Zoox",
     titleZh: "驭象",
-    descEn: "Cross-cultural brand communication strategy for an autonomous vehicle startup entering the Chinese market.",
+    descEn:
+      "Cross-cultural brand communication strategy for an autonomous vehicle startup entering the Chinese market.",
     descZh: "为进入中国市场的自动驾驶初创企业制定跨文化品牌传播策略。",
     dateEn: "November 2025",
     dateZh: "2025年11月",
@@ -113,7 +116,8 @@ export const workArticles: Article[] = [
     category: "Content & Branding",
     titleEn: "Balmain Beauty",
     titleZh: "巴尔曼美妆",
-    descEn: "Editorial content series for luxury beauty brand launch. Photography direction, copywriting, and digital campaign.",
+    descEn:
+      "Editorial content series for luxury beauty brand launch. Photography direction, copywriting, and digital campaign.",
     descZh: "奢侈美妆品牌上市的编辑内容系列。摄影指导、文案撰写和数字营销。",
     dateEn: "September 2025",
     dateZh: "2025年9月",
@@ -138,7 +142,8 @@ export const workArticles: Article[] = [
     category: "Documentary",
     titleEn: "The Blimp",
     titleZh: "飞艇",
-    descEn: "Short documentary on the forgotten history of Shanghai's airship era. Premiered at Shanghai International Film Festival.",
+    descEn:
+      "Short documentary on the forgotten history of Shanghai's airship era. Premiered at Shanghai International Film Festival.",
     descZh: "关于上海飞艇时代被遗忘历史的短纪录片。在上海国际电影节首映。",
     dateEn: "June 2025",
     dateZh: "2025年6月",
@@ -256,11 +261,11 @@ export const blogArticles: Article[] = [
       "As we look ahead, the integration of AI tools into OSINT workflows promises to accelerate analysis while raising important questions about automation bias and the role of human judgment in investigative work.",
     ],
     contentZh: [
-      "在过去十年中，开源情报经历了显著的转变。从安全分析师和业余调查人员的小众实践，它已经发展成为现代新闻业武器库中最强大的工具之一。",
-      "公开可用的卫星图像、社交媒体数据、企业注册信息和政府数据库的激增，为调查工作创造了前所未有的景象。Google Earth、Sentinel Hub 和各种社交媒体分析平台等工具使信息获取民主化，这些信息曾经是情报机构的专属领域。",
-      "然而，这种民主化带来了自身的挑战。可用数据的巨大体量产生的噪音甚至可以淹没经验丰富的分析师。关键技能不再是获取信息——而是跨多个来源进行过滤、交叉引用和验证的能力。",
-      "OSINT 调查的方法论遵循结构化方法：确定问题、映射可用数据源、收集和保存证据、分析模式以及通过独立佐证验证发现。每一步都需要技术能力和批判性思维。",
-      "展望未来，AI 工具与 OSINT 工作流程的整合有望加速分析，同时提出关于自动化偏见和人类判断在调查工作中作用的重要问题。",
+      "《纽约时报》在2月底发布了一篇AI测试文章，对市面上10多款主流的AI检测工具识别AI生成图像和音视频的能力进行了测试。文章指出，尽管AI进步神速，但目前你还不能指望依靠AI检测工具来判断图像的真伪。",
+      "这一结论与我们去年年底的观察基本一致：尽管学术界提出了许多检测方法，也不断有新论文发表，但在现实应用中，没有任何一款工具是完美的。",
+      "一些工具的检测结果相对准确，并具备对多模态内容（图像、视频、音频）的识别能力，例如Gemini Pro和AI or Not。Sensity和Hive Detect的表现也算得上差强人意。但一些主流商业大模型，例如Claude和ChatGPT，在判断图像真伪方面的表现反而未达预期。",
+      "这其中最令人费解的是Claude的表现——考虑到这是一款如此强调伦理的模型。但创造它的人好像完全没有考虑要让模型分辨得清真假这件事。我知道这款模型在代码方面的能力表现出色，但AI的表现再次证明，模型的能力有不同的维度。在为数不多的8类真假图片测试中，Claude仅通过了“真实拍摄的图片（非AI生成）”这一项，其余的内容，不是判断错误，就表示无法检测。",
+      "Claude在1月更新了它的constitution，强调要保持诚实并造福用户。我好奇，他们是否会将AI的核假能力作为指标纳入“诚实”的范畴。",
     ],
   },
   {
@@ -270,7 +275,8 @@ export const blogArticles: Article[] = [
     category: "Visual Culture",
     titleEn: "Notes on Cinematic Typography",
     titleZh: "关于电影排版的笔记",
-    descEn: "Exploring the intersection of film title design, editorial layout, and contemporary visual identity systems.",
+    descEn:
+      "Exploring the intersection of film title design, editorial layout, and contemporary visual identity systems.",
     descZh: "探索电影片名设计、编辑版式与当代视觉识别系统的交汇点。",
     dateEn: "February 2026",
     dateZh: "2026年2月",
@@ -318,7 +324,8 @@ export const blogArticles: Article[] = [
     category: "Digital Experience",
     titleEn: "Data as Narrative",
     titleZh: "数据即叙事",
-    descEn: "When information design becomes storytelling — reflections on building visual systems for complex datasets.",
+    descEn:
+      "When information design becomes storytelling — reflections on building visual systems for complex datasets.",
     descZh: "当信息设计变成叙事——关于为复杂数据集构建视觉系统的反思。",
     dateEn: "December 2025",
     dateZh: "2025年12月",
@@ -383,13 +390,7 @@ export const blogArticles: Article[] = [
 // 🔧 FEATURED WORK (Homepage) — Edit items below
 // These reference workArticles by slug for linking
 // ============================================================
-export const featuredWorkSlugs = [
-  "freshman",
-  "savor",
-  "beyond-the-limits",
-  "balmain-beauty",
-  "the-blimp",
-];
+export const featuredWorkSlugs = ["freshman", "savor", "beyond-the-limits", "balmain-beauty", "the-blimp"];
 
 export function getArticleBySlug(slug: string): Article | undefined {
   return [...workArticles, ...blogArticles].find((a) => a.slug === slug);
