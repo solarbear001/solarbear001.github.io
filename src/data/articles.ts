@@ -254,7 +254,6 @@ export const blogArticles: Article[] = [
     dateEn: "March 2026",
     dateZh: "2026年3月",
     image: "https://hivemoderation.com/images/c88713d.png",
-    image: "https://hivemoderation.com/images/c88713d.png",
     contentEn: [
       "Open-source intelligence has undergone a remarkable transformation in the past decade. What began as a niche practice among security analysts and hobbyist investigators has evolved into one of the most powerful tools in modern journalism's arsenal.",
       "The proliferation of publicly available satellite imagery, social media data, corporate registries, and government databases has created an unprecedented landscape for investigative work. Tools like Google Earth, Sentinel Hub, and various social media analysis platforms have democratized access to information that was once the exclusive domain of intelligence agencies.",
@@ -311,6 +310,7 @@ export const blogArticles: Article[] = [
     descZh: "探索电影片名设计、编辑版式与当代视觉识别系统的交汇点。",
     dateEn: "February 2026",
     dateZh: "2026年2月",
+    image: "https://hivemoderation.com/images/c88713d.png",
     contentEn: [
       "The title sequence exists in a liminal space — neither fully part of the film nor entirely separate from it. It is a threshold, a moment of anticipation where typography becomes cinema and letterforms take on the weight of narrative.",
       "From Saul Bass's revolutionary work on Vertigo and Anatomy of a Murder to the digital experimentation of contemporary designers, film typography has served as a laboratory for pushing the boundaries of what letters can do.",
