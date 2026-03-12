@@ -6,8 +6,8 @@ const posts = [
   {
     letter: "O",
     category: "OSINT",
-    titleEn: "Why AIGC detectors not trustworthy",
-    titleZh: "为什么AIGC检测工具不可信？",
+    titleEn: "The Architecture of Open-Source Intelligence",
+    titleZh: "为什么AI图像检测工具不可信？",
     descEn: "How digital forensics and open data reshape investigative journalism in an age of information overload.",
     descZh: "数字取证和开放数据如何在信息过载时代重塑调查新闻。",
     dateEn: "March 2026",
