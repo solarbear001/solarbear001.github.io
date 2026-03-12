@@ -254,6 +254,7 @@ export const blogArticles: Article[] = [
     dateEn: "March 2026",
     dateZh: "2026年3月",
     image: "https://hivemoderation.com/images/c88713d.png",
+    image: "https://hivemoderation.com/images/c88713d.png",
     contentEn: [
       "Open-source intelligence has undergone a remarkable transformation in the past decade. What began as a niche practice among security analysts and hobbyist investigators has evolved into one of the most powerful tools in modern journalism's arsenal.",
       "The proliferation of publicly available satellite imagery, social media data, corporate registries, and government databases has created an unprecedented landscape for investigative work. Tools like Google Earth, Sentinel Hub, and various social media analysis platforms have democratized access to information that was once the exclusive domain of intelligence agencies.",

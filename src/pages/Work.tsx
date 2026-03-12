@@ -51,7 +51,7 @@ const Work = () => {
                           {t("READ →", "阅读 →")}
                         </Link>
                       </div>
-                      <div className="col-span-12 md:col-span-4 md:col-start-4 grayscale">
+                      <div className="col-span-12 md:col-span-4 md:col-start-4 ">
                         <Link to={`/work/${project.slug}`}>
                           <div className="aspect-[4/3] overflow-hidden">
                             <img
