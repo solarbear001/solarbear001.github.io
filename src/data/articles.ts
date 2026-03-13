@@ -22,6 +22,7 @@ export interface Article {
   creditsZh?: string;
   image?: string;
   externalLink?: string;
+  inlineImages?: string[];
   // ============================================================
   // 📝 ARTICLE CONTENT — Edit here to change article body text
   // Each paragraph is one array element. Supports EN and ZH.
