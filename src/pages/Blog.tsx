@@ -17,9 +17,7 @@ const Blog = () => {
         {featured && (
           <section className="pt-20">
             <a
-              href={featured.externalLink || `/blog/${featured.slug}`}
-              target={featured.externalLink ? "_blank" : undefined}
-              rel={featured.externalLink ? "noopener noreferrer" : undefined}
+              href={`/blog/${featured.slug}`}
               className="block group"
             >
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
