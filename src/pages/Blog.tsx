@@ -72,7 +72,7 @@ const Blog = () => {
                     {/* Cover Image */}
                     <div className={`overflow-hidden ${isLarge ? "aspect-[4/3]" : "aspect-[3/2]"}`}>
                       <img
-                        src={post.image}
+                        src={post.image || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='white' width='1' height='1'/%3E%3C/svg%3E"}
                         alt={t(post.titleEn, post.titleZh)}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 saturate-[0.3]"
                       />
