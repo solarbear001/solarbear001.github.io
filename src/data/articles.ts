@@ -457,7 +457,7 @@ export const blogArticles: Article[] = [
     descZh: "DNS信息如何帮助核实新闻网站的可信度。",
     dateEn: "May 2, 2024",
     dateZh: "2024年5月2日",
-    image: blogCoverDefault,
+    image: https://imagecloud.thepaper.cn/thepaper/image/302/964/201.jpg,
     externalLink: "https://m.thepaper.cn/newsDetail_forward_27224988",
     contentEn: [],
     contentZh: [],
