@@ -269,13 +269,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Artistic closing */}
-        <section className="min-h-[60vh] flex items-center justify-center px-6">
-          <div className="text-center space-y-4">
-            <p className="text-display tracking-tight text-foreground/20 italic">Information Quality Matters</p>
-            <p className="text-display tracking-tight text-foreground/20 italic">Fact Matters</p>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
