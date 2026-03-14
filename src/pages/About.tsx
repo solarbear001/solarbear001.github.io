@@ -68,7 +68,7 @@ const About = () => {
         <section className="relative min-h-screen flex flex-col items-center justify-center px-6">
           <div className="relative w-[400px] max-w-[90vw] h-[400px] max-h-[90vw]">
             <img
-              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*eF8M_JOw-TMPWkctG-9NGQ.jpeg"
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*mbDVqQpqPu1END3sLn6vrQ.jpeg"
               alt="Shujing Zheng"
               className="w-full h-full object-cover grayscale"
             />
@@ -81,7 +81,7 @@ const About = () => {
                   <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30">ABOUT</span>
                 </div>
                 <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-justify leading-relaxed">
-                  writer&nbsp;&nbsp;editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
+                  editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
                 </p>
               </div>
 
