@@ -64,15 +64,15 @@ export const workArticles: Article[] = [
   {
     slug: "six-finger-boy-ai",
     type: "work",
-    letter: "S",
-    category: "AI",
+    letter: "冲突",
+    category: "Conflict",
     titleEn: "Lab | This 'Six-Fingered Boy' — Do LLMs Know It's AI-Made?",
     titleZh: "俄乌冲突一周年，\u201C双方\u201D伤亡几何？",
     descEn: "Testing whether large language models can identify AI-generated images with visible artifacts.",
     descZh: "测试大语言模型能否识别带有可见瑕疵的AI生成图像。",
     dateEn: "February 24, 2023",
     dateZh: "2023年2月24日",
-    creditsEn: "Conflict",
+    creditsEn: "Russia, Ukraine",
     creditsZh: "俄乌-2022",
     image:
       "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/480511258_1599950867297837_4184516365853765251_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=gcXnnZytZ5IQ7kNvwGLqT0o&_nc_oc=Adkd8c7Eqhk-8ztIUpeTqnAuf7-icnye_J8ofirgVb-irkxhw5bvaPoOjaVcVwlwNOQ&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=rpsHPinFjgdd6Rar2qEaeA&_nc_ss=8&oh=00_Afw-_cgC5xKMUhDmKsZvt2URm8CRU1iSP5jsVLVstAE6HQ&oe=69BA2EF4",
