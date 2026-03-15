@@ -47,8 +47,8 @@ function parseDateFromArticle(dateEn: string): Date {
 const START_DATE = new Date("2022-01-01");
 const END_DATE = new Date("2026-03-15");
 const ROWS = 7;
-const GRID_TOP = 120;
-const HINT_H = 48;
+const GRID_TOP = 90;
+const HINT_H = 36;
 const GAP = 2;
 
 function daysBetween(a: Date, b: Date) {
@@ -366,6 +366,17 @@ const PhotobookGrid = () => {
               </a>
             ))}
           </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+        {/* Scroll hint */}
+        <div className="flex-shrink-0 flex justify-center items-center" style={{ height: HINT_H }}>
+          <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground/40 uppercase">
+            {t("scroll to explore timeline →", "滚动探索时间线 →")}
+          </p>
         </div>
       </div>
     </section>
