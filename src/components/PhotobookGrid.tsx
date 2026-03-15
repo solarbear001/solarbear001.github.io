@@ -372,15 +372,5 @@ const PhotobookGrid = () => {
   );
 };
 
-        {/* Scroll hint */}
-        <div className="flex-shrink-0 flex justify-center items-center" style={{ height: HINT_H }}>
-          <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground/40 uppercase">
-            {t("scroll to explore timeline →", "滚动探索时间线 →")}
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default PhotobookGrid;
