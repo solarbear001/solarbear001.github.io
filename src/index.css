@@ -175,3 +175,19 @@
 .animate-glitch {
   animation: glitch 3s ease-in-out infinite;
 }
+
+/* Ripple wave effect for floating images */
+@keyframes ripple-wave {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
