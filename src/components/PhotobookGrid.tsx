@@ -1,4 +1,4 @@
-import { useRef, useMemo, useState, useEffect } from "react";
+import { useRef, useMemo, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -18,8 +18,9 @@ function parseDateFromArticle(dateEn: string): Date {
 const START_DATE = new Date("2022-01-01");
 const END_DATE = new Date("2026-03-15");
 const ROWS = 7;
-const GRID_TOP = 100; // px from top of sticky container
-const GRID_BOTTOM = 36; // px from bottom for hint
+const GRID_TOP = 90;
+const HINT_H = 36;
+const GAP = 2;
 
 function daysBetween(a: Date, b: Date) {
   return Math.floor((b.getTime() - a.getTime()) / (1000 * 60 * 60 * 24));
@@ -28,7 +29,6 @@ function daysBetween(a: Date, b: Date) {
 const totalDays = daysBetween(START_DATE, END_DATE);
 const totalCols = Math.ceil(totalDays / ROWS);
 
-// Theme labels that change based on scroll position
 const themes = [
   { col: 0, label: "The Beginning" },
   { col: 30, label: "Russia-Ukraine War" },
@@ -43,21 +43,36 @@ const PhotobookGrid = () => {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [currentTheme, setCurrentTheme] = useState(themes[0].label);
+  const [dims, setDims] = useState({ cellW: 120, cellH: 140 });
+
+  const updateDims = useCallback(() => {
+    const vh = window.innerHeight;
+    const availableH = vh - GRID_TOP - HINT_H;
+    const cellH = Math.floor(availableH / ROWS);
+    const cellW = Math.floor(cellH * 0.75);
+    setDims({ cellW, cellH });
+  }, []);
+
+  useEffect(() => {
+    updateDims();
+    window.addEventListener("resize", updateDims);
+    return () => window.removeEventListener("resize", updateDims);
+  }, [updateDims]);
+
+  const { cellW, cellH } = dims;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
 
-  // Horizontal translate driven by vertical scroll
-  const totalScrollWidth = totalCols * CELL_W;
+  const totalScrollWidth = totalCols * cellW;
   const translateX = useTransform(
     scrollYProgress,
     [0, 1],
     [0, -(totalScrollWidth - (typeof window !== "undefined" ? window.innerWidth : 1200))]
   );
 
-  // Map articles to grid positions
   const articlePositions = useMemo(() => {
     return workArticles.map((article) => {
       const date = parseDateFromArticle(article.dateEn);
@@ -68,7 +83,6 @@ const PhotobookGrid = () => {
     });
   }, []);
 
-  // Generate month labels
   const monthLabels = useMemo(() => {
     const labels: { col: number; label: string; isJan: boolean }[] = [];
     const current = new Date(START_DATE);
@@ -90,10 +104,9 @@ const PhotobookGrid = () => {
     return labels;
   }, []);
 
-  // Update theme based on scroll
   useEffect(() => {
     const unsubscribe = translateX.on("change", (val) => {
-      const visibleCol = Math.floor(Math.abs(val) / CELL_W);
+      const visibleCol = Math.floor(Math.abs(val) / cellW);
       let active = themes[0].label;
       for (const th of themes) {
         if (visibleCol >= th.col) active = th.label;
@@ -101,7 +114,9 @@ const PhotobookGrid = () => {
       setCurrentTheme(active);
     });
     return unsubscribe;
-  }, [translateX]);
+  }, [translateX, cellW]);
+
+  const gridH = ROWS * cellH;
 
   return (
     <section
@@ -109,9 +124,9 @@ const PhotobookGrid = () => {
       className="relative"
       style={{ height: `${Math.max(400, totalCols * 1.8)}vh` }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
         {/* Theme title */}
-        <div className="absolute top-24 left-0 right-0 z-10 flex justify-center">
+        <div className="flex-shrink-0 flex justify-center" style={{ height: GRID_TOP, alignItems: "flex-end", paddingBottom: 8 }}>
           <motion.p
             key={currentTheme}
             initial={{ opacity: 0, y: 8 }}
@@ -125,130 +140,131 @@ const PhotobookGrid = () => {
           </motion.p>
         </div>
 
-        {/* Grid container */}
-        <motion.div
-          className="absolute top-32 left-8 md:left-20"
-          style={{
-            x: translateX,
-            width: totalCols * CELL_W,
-            height: ROWS * CELL_H,
-          }}
-        >
-          {/* Background grid lines */}
-          <svg
-            className="absolute inset-0 pointer-events-none"
-            width={totalCols * CELL_W}
-            height={ROWS * CELL_H}
-            style={{ opacity: 0.08 }}
+        {/* Grid area */}
+        <div className="flex-1 relative overflow-hidden">
+          <motion.div
+            className="absolute top-0 left-0"
+            style={{
+              x: translateX,
+              width: totalCols * cellW,
+              height: gridH,
+            }}
           >
-            {/* Vertical lines */}
-            {Array.from({ length: totalCols + 1 }, (_, i) => (
-              <line
-                key={`v${i}`}
-                x1={i * CELL_W}
-                y1={0}
-                x2={i * CELL_W}
-                y2={ROWS * CELL_H}
-                stroke="hsl(0,0%,60%)"
-                strokeWidth={0.5}
-              />
-            ))}
-            {/* Horizontal lines */}
-            {Array.from({ length: ROWS + 1 }, (_, i) => (
-              <line
-                key={`h${i}`}
-                x1={0}
-                y1={i * CELL_H}
-                x2={totalCols * CELL_W}
-                y2={i * CELL_H}
-                stroke="hsl(0,0%,60%)"
-                strokeWidth={0.5}
-              />
-            ))}
-          </svg>
-
-          {/* Month labels (vertical text) */}
-          {monthLabels.map((ml, i) => (
-            <div
-              key={i}
-              className="absolute font-serif italic"
-              style={{
-                left: ml.col * CELL_W,
-                top: ROWS * CELL_H + 12,
-                writingMode: "vertical-rl",
-                fontSize: ml.isJan ? "11px" : "9px",
-                color: ml.isJan
-                  ? "hsl(0,0%,55%)"
-                  : "hsl(0,0%,35%)",
-                letterSpacing: "0.1em",
-              }}
+            {/* Background grid lines */}
+            <svg
+              className="absolute inset-0 pointer-events-none"
+              width={totalCols * cellW}
+              height={gridH}
+              style={{ opacity: 0.08 }}
             >
-              {ml.label}
-            </div>
-          ))}
+              {Array.from({ length: totalCols + 1 }, (_, i) => (
+                <line
+                  key={`v${i}`}
+                  x1={i * cellW}
+                  y1={0}
+                  x2={i * cellW}
+                  y2={gridH}
+                  stroke="hsl(0,0%,60%)"
+                  strokeWidth={0.5}
+                />
+              ))}
+              {Array.from({ length: ROWS + 1 }, (_, i) => (
+                <line
+                  key={`h${i}`}
+                  x1={0}
+                  y1={i * cellH}
+                  x2={totalCols * cellW}
+                  y2={i * cellH}
+                  stroke="hsl(0,0%,60%)"
+                  strokeWidth={0.5}
+                />
+              ))}
+            </svg>
 
-          {/* Article cards */}
-          {articlePositions.map(({ article, col, row }) => {
-            const CardWrapper = article.externalLink
-              ? ({ children, className, style }: any) => (
-                  <a
-                    href={article.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={className}
-                    style={style}
-                  >
-                    {children}
-                  </a>
-                )
-              : ({ children, className, style }: any) => (
-                  <Link
-                    to={`/work/${article.slug}`}
-                    className={className}
-                    style={style}
-                  >
-                    {children}
-                  </Link>
-                );
-
-            return (
-              <CardWrapper
-                key={article.slug}
-                className="absolute group cursor-pointer block"
+            {/* Month labels inside grid gaps */}
+            {monthLabels.map((ml, i) => (
+              <div
+                key={i}
+                className="absolute font-serif italic pointer-events-none flex items-center justify-center"
                 style={{
-                  left: col * CELL_W,
-                  top: row * CELL_H,
-                  width: CELL_W - 2,
-                  height: CELL_H - 2,
+                  left: ml.col * cellW,
+                  top: Math.floor(ROWS / 2) * cellH,
+                  width: cellW,
+                  height: cellH,
+                  fontSize: ml.isJan ? "11px" : "9px",
+                  color: ml.isJan
+                    ? "hsl(0,0%,45%)"
+                    : "hsl(0,0%,28%)",
+                  letterSpacing: "0.1em",
+                  writingMode: "vertical-rl",
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden">
-                  {article.image && (
-                    <img
-                      src={article.image}
-                      alt={t(article.titleEn, article.titleZh)}
-                      className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                      loading="lazy"
-                    />
-                  )}
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-1 left-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p
-                      className="font-sans text-foreground leading-tight truncate"
-                      style={{ fontSize: "6px" }}
-                    >
-                      {t(article.titleEn, article.titleZh)}
-                    </p>
-                  </div>
-                </div>
-              </CardWrapper>
-            );
-          })}
-        </motion.div>
+                {ml.label}
+              </div>
+            ))}
 
-        {/* Scroll hint */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+            {/* Article cards */}
+            {articlePositions.map(({ article, col, row }) => {
+              const CardWrapper = article.externalLink
+                ? ({ children, className, style }: any) => (
+                    <a
+                      href={article.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={className}
+                      style={style}
+                    >
+                      {children}
+                    </a>
+                  )
+                : ({ children, className, style }: any) => (
+                    <Link
+                      to={`/work/${article.slug}`}
+                      className={className}
+                      style={style}
+                    >
+                      {children}
+                    </Link>
+                  );
+
+              return (
+                <CardWrapper
+                  key={article.slug}
+                  className="absolute group cursor-pointer block"
+                  style={{
+                    left: col * cellW + GAP / 2,
+                    top: row * cellH + GAP / 2,
+                    width: cellW - GAP,
+                    height: cellH - GAP,
+                  }}
+                >
+                  <div className="relative w-full h-full overflow-hidden">
+                    {article.image && (
+                      <img
+                        src={article.image}
+                        alt={t(article.titleEn, article.titleZh)}
+                        className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-1 left-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p
+                        className="font-sans text-foreground leading-tight truncate"
+                        style={{ fontSize: "8px" }}
+                      >
+                        {t(article.titleEn, article.titleZh)}
+                      </p>
+                    </div>
+                  </div>
+                </CardWrapper>
+              );
+            })}
+          </motion.div>
+        </div>
+
+        {/* Scroll hint - flush against grid bottom */}
+        <div className="flex-shrink-0 flex justify-center items-center" style={{ height: HINT_H }}>
           <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground/40 uppercase">
             {t("scroll to explore timeline →", "滚动探索时间线 →")}
           </p>
