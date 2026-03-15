@@ -47,8 +47,8 @@ function parseDateFromArticle(dateEn: string): Date {
 const START_DATE = new Date("2022-01-01");
 const END_DATE = new Date("2026-03-15");
 const ROWS = 7;
-const GRID_TOP = 90;
-const HINT_H = 36;
+const GRID_TOP = 120;
+const HINT_H = 48;
 const GAP = 2;
 
 function daysBetween(a: Date, b: Date) {
