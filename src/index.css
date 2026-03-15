@@ -58,6 +58,10 @@
     @apply border-border;
   }
 
+  .cursor-none * {
+    cursor: none !important;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
