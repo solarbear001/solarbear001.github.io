@@ -11,6 +11,7 @@ const Work = () => {
         <FloatingHero />
         <PhotobookGrid />
       </main>
+      <div className="h-16 bg-background" />
       <Footer />
     </div>
   );

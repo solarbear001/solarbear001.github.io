@@ -1,8 +1,37 @@
 import { useRef, useMemo, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
+
+import work1 from "@/assets/work-1.jpg";
+import work2 from "@/assets/work-2.jpg";
+import work3 from "@/assets/work-3.jpg";
+import work4 from "@/assets/work-4.jpg";
+import work5 from "@/assets/work-5.jpg";
+import blogExt1 from "@/assets/blog-ext-1.jpg";
+import blogExt2 from "@/assets/blog-ext-2.jpg";
+import blogExt3 from "@/assets/blog-ext-3.jpg";
+import blogExt4 from "@/assets/blog-ext-4.jpg";
+import blogExt5 from "@/assets/blog-ext-5.jpg";
+import blogExt6 from "@/assets/blog-ext-6.jpg";
+import blogExt7 from "@/assets/blog-ext-7.jpg";
+import blogExt8 from "@/assets/blog-ext-8.jpg";
+import blogExt9 from "@/assets/blog-ext-9.jpg";
+import blogExt10 from "@/assets/blog-ext-10.jpg";
+import blog1 from "@/assets/blog-1.jpg";
+import blog2 from "@/assets/blog-2.jpg";
+import blog3 from "@/assets/blog-3.jpg";
+import blog4 from "@/assets/blog-4.jpg";
+import blog5 from "@/assets/blog-5.jpg";
+import blog6 from "@/assets/blog-6.jpg";
+
+const fillerImages = [
+  work1, work2, work3, work4, work5,
+  blogExt1, blogExt2, blogExt3, blogExt4, blogExt5,
+  blogExt6, blogExt7, blogExt8, blogExt9, blogExt10,
+  blog1, blog2, blog3, blog4, blog5, blog6,
+];
 
 function parseDateFromArticle(dateEn: string): Date {
   const d = new Date(dateEn);
@@ -29,20 +58,58 @@ function daysBetween(a: Date, b: Date) {
 const totalDays = daysBetween(START_DATE, END_DATE);
 const totalCols = Math.ceil(totalDays / ROWS);
 
-const themes = [
-  { col: 0, label: "The Beginning" },
-  { col: 30, label: "Russia-Ukraine War" },
-  { col: 60, label: "Visual Investigation" },
-  { col: 100, label: "Open Source Intelligence" },
-  { col: 140, label: "Content & Branding" },
-  { col: 180, label: "Digital Experience" },
-  { col: 210, label: "The Archive Continues" },
+const themes: { col: number; en: string; zh: string }[] = [
+  { col: 0, en: "The Beginning", zh: "起始" },
+  { col: 30, en: "Russia-Ukraine War", zh: "俄乌战争" },
+  { col: 60, en: "Visual Investigation", zh: "视觉调查" },
+  { col: 100, en: "Open Source Intelligence", zh: "开源情报" },
+  { col: 140, en: "Content & Branding", zh: "内容与品牌" },
+  { col: 180, en: "Digital Experience", zh: "数字体验" },
+  { col: 210, en: "The Archive Continues", zh: "档案延续" },
 ];
+
+// Pre-generate filler cards for empty weeks
+function generateFillerCards(articleOccupied: Set<string>) {
+  const fillers: { col: number; row: number; image: string; link: string }[] = [];
+  // Each "week" = 7 cols (49 days). Place 1-2 cards per week in unoccupied cells.
+  const seededRandom = (seed: number) => {
+    const x = Math.sin(seed * 9301 + 49297) * 49297;
+    return x - Math.floor(x);
+  };
+
+  for (let weekStart = 0; weekStart < totalCols; weekStart += 7) {
+    const weekEnd = Math.min(weekStart + 7, totalCols);
+    // Find empty cells in this week
+    const emptyCells: { col: number; row: number }[] = [];
+    for (let c = weekStart; c < weekEnd; c++) {
+      for (let r = 0; r < ROWS; r++) {
+        if (!articleOccupied.has(`${c}-${r}`)) {
+          emptyCells.push({ col: c, row: r });
+        }
+      }
+    }
+    if (emptyCells.length === 0) continue;
+    // Pick 1-2 random cells
+    const count = seededRandom(weekStart) > 0.5 ? 2 : 1;
+    for (let i = 0; i < count && i < emptyCells.length; i++) {
+      const idx = Math.floor(seededRandom(weekStart * 7 + i + 1) * emptyCells.length);
+      const cell = emptyCells[idx];
+      emptyCells.splice(idx, 1);
+      const imgIdx = Math.floor(seededRandom(weekStart * 3 + i + 99) * fillerImages.length);
+      fillers.push({
+        ...cell,
+        image: fillerImages[imgIdx],
+        link: `https://unsplash.com/s/photos/documentary?page=${weekStart + i + 1}`,
+      });
+    }
+  }
+  return fillers;
+}
 
 const PhotobookGrid = () => {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [currentTheme, setCurrentTheme] = useState(themes[0].label);
+  const [currentTheme, setCurrentTheme] = useState(themes[0]);
   const [dims, setDims] = useState({ cellW: 120, cellH: 140 });
 
   const updateDims = useCallback(() => {
@@ -83,6 +150,12 @@ const PhotobookGrid = () => {
     });
   }, []);
 
+  const fillerCards = useMemo(() => {
+    const occupied = new Set<string>();
+    articlePositions.forEach(({ col, row }) => occupied.add(`${col}-${row}`));
+    return generateFillerCards(occupied);
+  }, [articlePositions]);
+
   const monthLabels = useMemo(() => {
     const labels: { col: number; label: string; isJan: boolean }[] = [];
     const current = new Date(START_DATE);
@@ -107,9 +180,9 @@ const PhotobookGrid = () => {
   useEffect(() => {
     const unsubscribe = translateX.on("change", (val) => {
       const visibleCol = Math.floor(Math.abs(val) / cellW);
-      let active = themes[0].label;
+      let active = themes[0];
       for (const th of themes) {
-        if (visibleCol >= th.col) active = th.label;
+        if (visibleCol >= th.col) active = th;
       }
       setCurrentTheme(active);
     });
@@ -125,19 +198,24 @@ const PhotobookGrid = () => {
       style={{ height: `${Math.max(400, totalCols * 1.8)}vh` }}
     >
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
-        {/* Theme title */}
-        <div className="flex-shrink-0 flex justify-center" style={{ height: GRID_TOP, alignItems: "flex-end", paddingBottom: 8 }}>
-          <motion.p
-            key={currentTheme}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.6 }}
-            className="font-serif text-sm tracking-[0.15em] italic"
-            style={{ color: "hsl(0, 60%, 50%)" }}
-          >
-            {currentTheme}
-          </motion.p>
+        {/* Theme title - fixed position, above grid, not clipped */}
+        <div
+          className="flex-shrink-0 flex justify-center relative z-10"
+          style={{ height: GRID_TOP, alignItems: "flex-end", paddingBottom: 8 }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={currentTheme.en}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.6 }}
+              className="font-serif text-sm tracking-[0.15em] italic"
+              style={{ color: "hsl(0, 60%, 50%)" }}
+            >
+              {t(currentTheme.en, currentTheme.zh)}
+            </motion.p>
+          </AnimatePresence>
         </div>
 
         {/* Grid area */}
@@ -260,10 +338,37 @@ const PhotobookGrid = () => {
                 </CardWrapper>
               );
             })}
+
+            {/* Filler cards for empty weeks */}
+            {fillerCards.map((filler, i) => (
+              <a
+                key={`filler-${i}`}
+                href={filler.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute group cursor-pointer block"
+                style={{
+                  left: filler.col * cellW + GAP / 2,
+                  top: filler.row * cellH + GAP / 2,
+                  width: cellW - GAP,
+                  height: cellH - GAP,
+                }}
+              >
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src={filler.image}
+                    alt=""
+                    className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </a>
+            ))}
           </motion.div>
         </div>
 
-        {/* Scroll hint - flush against grid bottom */}
+        {/* Scroll hint */}
         <div className="flex-shrink-0 flex justify-center items-center" style={{ height: HINT_H }}>
           <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground/40 uppercase">
             {t("scroll to explore timeline →", "滚动探索时间线 →")}
