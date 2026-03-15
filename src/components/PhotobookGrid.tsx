@@ -367,6 +367,9 @@ const PhotobookGrid = () => {
             ))}
           </motion.div>
         </div>
-        
+      </div>
+    </section>
+  );
+};
 
 export default PhotobookGrid;
