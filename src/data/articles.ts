@@ -49,7 +49,7 @@ export const workArticles: Article[] = [
     dateZh: "2026年1月",
     creditsEn: "Directed & Edited — Solo",
     creditsZh: "导演 & 剪辑 — 独立完成",
-    image: work1,
+    image: "https://images.pexels.com/photos/11734710/pexels-photo-11734710.jpeg",
     contentEn: [
       "Freshman is an investigative documentary that traces the evolution of grassroots journalism in the digital era. Through interviews with independent reporters, data analysts, and citizen journalists across three continents, the film examines how open-source tools and social media platforms have fundamentally altered the landscape of news gathering.",
       "The project began as a personal inquiry into the disconnect between institutional media narratives and on-the-ground realities. Over eighteen months of production, it expanded into a broader meditation on truth, verification, and the democratization of information.",
