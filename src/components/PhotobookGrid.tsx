@@ -68,10 +68,40 @@ const themes: { col: number; en: string; zh: string }[] = [
   { col: 210, en: "The Archive Continues", zh: "档案延续" },
 ];
 
+// ============================================================
+// 🔗 FILLER CARD LINKS — Edit this array to set individual links
+// for each filler card image in the Work page grid.
+// Each entry maps an image to a URL (external or internal route).
+// To change images: replace the imported image files above (blogExt1, etc.)
+// To change links: edit the `link` value below for each image.
+// ============================================================
+const fillerImageLinks: Record<string, string> = {
+  [work1]: "https://www.thepaper.cn/newsDetail_forward_16942025",
+  [work2]: "https://m.thepaper.cn/newsDetail_forward_17829990",
+  [work3]: "https://www.thepaper.cn/newsDetail_forward_30721319",
+  [work4]: "https://www.thepaper.cn/newsDetail_forward_31880733",
+  [work5]: "https://www.thepaper.cn/newsDetail_forward_32523498",
+  [blogExt1]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt2]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt3]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt4]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt5]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt6]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt7]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt8]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt9]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blogExt10]: "https://m.thepaper.cn/newsDetail_forward_22049169",
+  [blog1]: "/blog/gemini-vs-chatgpt-video",
+  [blog2]: "/blog/gemini-vs-chatgpt-video",
+  [blog3]: "/blog/gemini-vs-chatgpt-video",
+  [blog4]: "/blog/gemini-vs-chatgpt-video",
+  [blog5]: "/blog/gemini-vs-chatgpt-video",
+  [blog6]: "/blog/gemini-vs-chatgpt-video",
+};
+
 // Pre-generate filler cards for empty weeks
 function generateFillerCards(articleOccupied: Set<string>) {
   const fillers: { col: number; row: number; image: string; link: string }[] = [];
-  // Each "week" = 7 cols (49 days). Place 1-2 cards per week in unoccupied cells.
   const seededRandom = (seed: number) => {
     const x = Math.sin(seed * 9301 + 49297) * 49297;
     return x - Math.floor(x);
@@ -79,7 +109,6 @@ function generateFillerCards(articleOccupied: Set<string>) {
 
   for (let weekStart = 0; weekStart < totalCols; weekStart += 7) {
     const weekEnd = Math.min(weekStart + 7, totalCols);
-    // Find empty cells in this week
     const emptyCells: { col: number; row: number }[] = [];
     for (let c = weekStart; c < weekEnd; c++) {
       for (let r = 0; r < ROWS; r++) {
@@ -89,17 +118,17 @@ function generateFillerCards(articleOccupied: Set<string>) {
       }
     }
     if (emptyCells.length === 0) continue;
-    // Pick 1-2 random cells
     const count = seededRandom(weekStart) > 0.5 ? 2 : 1;
     for (let i = 0; i < count && i < emptyCells.length; i++) {
       const idx = Math.floor(seededRandom(weekStart * 7 + i + 1) * emptyCells.length);
       const cell = emptyCells[idx];
       emptyCells.splice(idx, 1);
       const imgIdx = Math.floor(seededRandom(weekStart * 3 + i + 99) * fillerImages.length);
+      const image = fillerImages[imgIdx];
       fillers.push({
         ...cell,
-        image: fillerImages[imgIdx],
-        link: `https://unsplash.com/s/photos/documentary?page=${weekStart + i + 1}`,
+        image,
+        link: fillerImageLinks[image] || "https://unsplash.com/s/photos/documentary",
       });
     }
   }

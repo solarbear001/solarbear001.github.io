@@ -1,11 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { workArticles, featuredWorkSlugs } from "@/data/articles";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const featured = featuredWorkSlugs.map(
   (slug) => workArticles.find((a) => a.slug === slug)!
 );
+
+// ============================================================
+// 🔗 FEATURED WORK EXTERNAL LINKS
+// These 5 links correspond to the 5 featured work items below.
+// To change cover images, edit the `image` field of each article
+// in src/data/articles.ts (search for the slug name).
+// ============================================================
+const featuredLinks = [
+  "https://www.thepaper.cn/newsDetail_forward_16942025",
+  "https://m.thepaper.cn/newsDetail_forward_17829990",
+  "https://www.thepaper.cn/newsDetail_forward_30721319",
+  "https://www.thepaper.cn/newsDetail_forward_31880733",
+  "https://www.thepaper.cn/newsDetail_forward_32523498",
+];
 
 const FeaturedWork = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -24,8 +37,10 @@ const FeaturedWork = () => {
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
         {featured.map((project, i) => (
           <ScrollReveal key={project.slug} delay={i * 0.1}>
-            <Link
-              to={`/work/${project.slug}`}
+            <a
+              href={featuredLinks[i]}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative aspect-[3/4] overflow-hidden cursor-pointer block"
               onMouseEnter={() => setHoveredId(i)}
               onMouseLeave={() => setHoveredId(null)}
@@ -48,7 +63,7 @@ const FeaturedWork = () => {
                   {project.category}
                 </p>
               </div>
-            </Link>
+            </a>
           </ScrollReveal>
         ))}
       </div>
