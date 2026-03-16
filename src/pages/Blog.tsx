@@ -129,7 +129,7 @@ const Blog = () => {
         {/* Masonry Grid */}
         <section className="max-w-6xl mx-auto px-6 md:px-20 pb-20">
           {visibleArticles.length === 0 ? (
-            <div className="py-20 text-center text-black/30 font-sans text-sm">
+            <div className="py-20 text-center text-white/30 font-sans text-sm">
               {t("No articles found", "未找到文章")}
             </div>
           ) : (
