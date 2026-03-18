@@ -94,7 +94,7 @@ export const workArticles: Article[] = [
     dateZh: "2022年4月",
     creditsEn: "Research Lead — w/ Global Voices",
     creditsZh: "研究负责人 — 与 Global Voices 合作",
-    image: "https://www.globaltimes.cn/Portals/0/attachment/2022/2022-03-31/9609162e-0363-4561-98cb-8233c52f0fae.jpeg",
+    image: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image",
     contentEn: [
       "Savor is a long-form open-source intelligence project investigating supply chain opacity in Southeast Asian food markets. Using satellite imagery analysis, shipping data cross-referencing, and social media monitoring, the research mapped previously undocumented networks of food distribution across five countries.",
       "The methodology combined traditional investigative techniques with cutting-edge OSINT tools, including geolocation verification, corporate registry analysis, and automated data scraping from public trade databases.",
@@ -137,8 +137,8 @@ export const workArticles: Article[] = [
     type: "work",
     letter: "B",
     category: "Media Literacy",
-    titleEn: "清华大学媒体工作坊",
-    titleZh: "Media Workshop × Tsinghua",
+    titleEn: "Media Workshop × Tsinghua",
+    titleZh: "清华大学媒体工作坊",
     descEn:
       "Editorial content series for luxury beauty brand launch. Photography direction, copywriting, and digital campaign.",
     descZh: "奢侈美妆品牌上市的编辑内容系列。摄影指导、文案撰写和数字营销。",
