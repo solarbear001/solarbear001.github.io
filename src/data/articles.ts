@@ -136,9 +136,9 @@ export const workArticles: Article[] = [
     slug: "balmain-beauty",
     type: "work",
     letter: "B",
-    category: "Content & Branding",
-    titleEn: "Balmain Beauty",
-    titleZh: "巴尔曼美妆",
+    category: "Media Literacy",
+    titleEn: "清华大学媒体工作坊",
+    titleZh: "Media Workshop × Tsinghua",
     descEn:
       "Editorial content series for luxury beauty brand launch. Photography direction, copywriting, and digital campaign.",
     descZh: "奢侈美妆品牌上市的编辑内容系列。摄影指导、文案撰写和数字营销。",
@@ -146,7 +146,7 @@ export const workArticles: Article[] = [
     dateZh: "2025年9月",
     creditsEn: "Editor & Content Director",
     creditsZh: "编辑 & 内容总监",
-    image: work4,
+    image: "https://imgpai.thepaper.cn/newpai/image/20251103/9d9668be-6af5-4366-8d15-0d12628cd33c.jpg",
     contentEn: [
       "Balmain Beauty was a comprehensive editorial content project for the luxury brand's beauty line launch in the Asia-Pacific market. The work spanned photography direction, copywriting, and the conception of a multi-platform digital campaign.",
       "The editorial approach drew from high fashion photography traditions while incorporating elements of documentary realism — a deliberate tension that reflected the brand's positioning between heritage luxury and contemporary accessibility.",
@@ -162,9 +162,9 @@ export const workArticles: Article[] = [
     slug: "the-blimp",
     type: "work",
     letter: "T",
-    category: "Documentary",
-    titleEn: "The Blimp",
-    titleZh: "飞艇",
+    category: "Visual Storytelling",
+    titleEn: "Epstein Files",
+    titleZh: "爱泼斯坦文件",
     descEn:
       "Short documentary on the forgotten history of Shanghai's airship era. Premiered at Shanghai International Film Festival.",
     descZh: "关于上海飞艇时代被遗忘历史的短纪录片。在上海国际电影节首映。",
@@ -172,7 +172,8 @@ export const workArticles: Article[] = [
     dateZh: "2025年6月",
     creditsEn: "Director & Writer",
     creditsZh: "导演 & 编剧",
-    image: work5,
+    image:
+      "https://media.wired.com/photos/69404e98ccaf9f64c5d1c4b0/3:2/w_2240,c_limit/sec-epstein-doc-dump-2225859618.jpg",
     contentEn: [
       "The Blimp is a short documentary that unearths the forgotten chapter of Shanghai's brief airship era in the 1930s. Through archival footage, historical photographs, and interviews with aviation historians, the film reconstructs a period when dirigibles briefly dotted the Shanghai skyline.",
       "The narrative weaves together personal stories of the engineers and pilots involved with broader themes of technological ambition, colonial enterprise, and the fragility of progress in pre-war China.",
