@@ -267,7 +267,7 @@ export const workArticles: Article[] = [
     letter: "明",
     category: "Fact Check",
     titleEn: "Was Netanyahu Assassinated? Where Did the Rumor Come From?",
-    titleZh: "明查｜"以色列总理内塔尼亚胡遭暗杀身亡"的传言是怎么来的？",
+    titleZh: '明查｜"以色列总理内塔尼亚胡遭暗杀身亡"的传言是怎么来的？',
     descEn: "Fact-checking viral claims about Netanyahu's assassination.",
     descZh: "核查关于内塔尼亚胡遇刺的网络传言。",
     dateEn: "March 10, 2026",
