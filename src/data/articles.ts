@@ -427,7 +427,7 @@ export const workArticles: Article[] = [
     letter: "明",
     category: "Fact Check",
     titleEn: "Russian Advisor Barannikov Helped Capture Maduro? AI-Generated Story",
-    titleZh: "明查｜"俄罗斯前军事顾问巴兰尼科夫"协助抓捕马杜罗？AI编的段子",
+    titleZh: '明查｜"俄罗斯前军事顾问巴兰尼科夫"协助抓捕马杜罗？AI编的段子',
     descEn: "Exposing AI-fabricated stories about Maduro's capture.",
     descZh: "揭露关于马杜罗被捕的AI编造故事。",
     dateEn: "January 10, 2026",
