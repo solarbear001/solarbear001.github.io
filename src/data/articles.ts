@@ -107,32 +107,6 @@ export const workArticles: Article[] = [
     ],
   },
   {
-    slug: "zoox",
-    type: "work",
-    letter: "Z",
-    category: "International Communication",
-    titleEn: "Zoox",
-    titleZh: "驭象",
-    descEn:
-      "Cross-cultural brand communication strategy for an autonomous vehicle startup entering the Chinese market.",
-    descZh: "为进入中国市场的自动驾驶初创企业制定跨文化品牌传播策略。",
-    dateEn: "November 2025",
-    dateZh: "2025年11月",
-    creditsEn: "Strategist — w/ Monks",
-    creditsZh: "策略师 — 与 Monks 合作",
-    image: work3,
-    contentEn: [
-      "Zoox was a cross-cultural brand communication project developed for an autonomous vehicle startup seeking to establish presence in the Chinese market. The challenge was to translate complex technological concepts into culturally resonant narratives.",
-      "Working with Monks, the strategy encompassed brand naming, visual identity adaptation, key opinion leader partnerships, and a phased digital campaign across WeChat, Weibo, and Douyin. The approach prioritized cultural authenticity over direct translation.",
-      "The campaign achieved significant engagement metrics and established a framework for technology brands navigating the nuances of Chinese digital ecosystems.",
-    ],
-    contentZh: [
-      "《驭象》是为一家寻求进入中国市场的自动驾驶初创企业开发的跨文化品牌传播项目。挑战在于将复杂的技术概念转化为具有文化共鸣的叙事。",
-      "与 Monks 合作，策略涵盖品牌命名、视觉识别适配、关键意见领袖合作以及跨微信、微博和抖音的分阶段数字营销活动。该方法优先考虑文化真实性而非直接翻译。",
-      "该活动取得了显著的互动指标，并为科技品牌驾驭中国数字生态系统的细微差异建立了框架。",
-    ],
-  },
-  {
     slug: "balmain-beauty",
     type: "work",
     letter: "B",
