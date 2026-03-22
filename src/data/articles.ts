@@ -1046,8 +1046,7 @@ export const workArticles: Article[] = [
     descZh: "事实核查调查。",
     dateEn: "April 17, 2025",
     dateZh: "2025年4月17日",
-    image:
-      "https://static.wikia.nocookie.net/house-of-cards/images/9/9d/Barack_Obama.jpg/revision/latest/scale-to-width-down/1000?cb=20180308093428",
+    image: "https://media.newyorker.com/photos/5ebdbcc70fe2fbfb61a2959f/master/w_2240,c_limit/Glasser-TrumpObama.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_30662354",
     contentEn: [],
     contentZh: [],

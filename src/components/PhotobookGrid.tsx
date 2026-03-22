@@ -108,11 +108,6 @@ const fillerImageLinks: Record<string, string> = {
   [blogExt1]: "https://m.thepaper.cn/newsDetail_forward_22049169",
   [blogExt2]: "https://m.thepaper.cn/newsDetail_forward_22049169",
   [blog1]: "/blog/gemini-vs-chatgpt-video",
-  [blog2]: "/blog/gemini-vs-chatgpt-video",
-  [blog3]: "/blog/gemini-vs-chatgpt-video",
-  [blog4]: "/blog/gemini-vs-chatgpt-video",
-  [blog5]: "/blog/gemini-vs-chatgpt-video",
-  [blog6]: "/blog/gemini-vs-chatgpt-video",
 };
 
 // Pre-generate filler cards for empty weeks
