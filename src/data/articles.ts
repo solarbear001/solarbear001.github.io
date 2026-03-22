@@ -4223,7 +4223,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "December 16, 2022",
     dateZh: "2022年12月16日",
-    image: "https://i.guim.co.uk/img/media/3f0b01dbbe44caeab51db80b3540630294ae9c66/0_134_3644_2186/master/3644.jpg?width=620&dpr=2&s=none&crop=none",
+    image:
+      "https://i.guim.co.uk/img/media/3f0b01dbbe44caeab51db80b3540630294ae9c66/0_134_3644_2186/master/3644.jpg?width=620&dpr=2&s=none&crop=none",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_21198675",
     contentEn: [],
     contentZh: [],
@@ -4287,7 +4288,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "November 24, 2022",
     dateZh: "2022年11月24日",
-    image: "https://cassette.sphdigital.com.sg/image/zaobao/3e74aef5cbd5b8e668cc1cd6bec8769c7cbe520ae19e572e7587996c804f9465?f=webp&o=zbimg&oloc=se",
+    image:
+      "https://cassette.sphdigital.com.sg/image/zaobao/3e74aef5cbd5b8e668cc1cd6bec8769c7cbe520ae19e572e7587996c804f9465?f=webp&o=zbimg&oloc=se",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20878048",
     contentEn: [],
     contentZh: [],
@@ -4303,7 +4305,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "November 18, 2022",
     dateZh: "2022年11月18日",
-    image: "https://fortune.com/img-assets/wp-content/uploads/2023/02/GettyImages-1247411730-e1677175587621.jpg?format=webp&w=1280&q=100",
+    image:
+      "https://fortune.com/img-assets/wp-content/uploads/2023/02/GettyImages-1247411730-e1677175587621.jpg?format=webp&w=1280&q=100",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20794407",
     contentEn: [],
     contentZh: [],
@@ -4319,7 +4322,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "November 2, 2022",
     dateZh: "2022年11月2日",
-    image: "https://mediazh.vietnamplus.vn/images/04ee44797cf18dd37fd58ae1014c0063819100f82808c28811ed928fd12e9a313c7824e19963ca362c225a23b4bb3348/1704capquang.jpg",
+    image:
+      "https://mediazh.vietnamplus.vn/images/04ee44797cf18dd37fd58ae1014c0063819100f82808c28811ed928fd12e9a313c7824e19963ca362c225a23b4bb3348/1704capquang.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20560655",
     contentEn: [],
     contentZh: [],
@@ -4367,7 +4371,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "October 22, 2022",
     dateZh: "2022年10月22日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg/960px-Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg/960px-Aurora_borealis_over_Eielson_Air_Force_Base%2C_Alaska.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20396070",
     contentEn: [],
     contentZh: [],
@@ -4399,7 +4404,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "October 13, 2022",
     dateZh: "2022年10月13日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/RAF_F-35B_integration_flying_training_with_USAF_B-2_30092019_-_4.jpg/500px-RAF_F-35B_integration_flying_training_with_USAF_B-2_30092019_-_4.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/RAF_F-35B_integration_flying_training_with_USAF_B-2_30092019_-_4.jpg/500px-RAF_F-35B_integration_flying_training_with_USAF_B-2_30092019_-_4.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20279087",
     contentEn: [],
     contentZh: [],
@@ -4447,7 +4453,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "September 15, 2022",
     dateZh: "2022年9月15日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2%D0%B7%D0%B8%D0%BC%D0%BA%D1%83%2C_%D0%B0%D0%B5%D1%80%D0%BE%D1%84%D0%BE%D1%82%D0%BE.jpg/500px-%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2%D0%B7%D0%B8%D0%BC%D0%BA%D1%83%2C_%D0%B0%D0%B5%D1%80%D0%BE%D1%84%D0%BE%D1%82%D0%BE.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2%D0%B7%D0%B8%D0%BC%D0%BA%D1%83%2C_%D0%B0%D0%B5%D1%80%D0%BE%D1%84%D0%BE%D1%82%D0%BE.jpg/500px-%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2%D0%B7%D0%B8%D0%BC%D0%BA%D1%83%2C_%D0%B0%D0%B5%D1%80%D0%BE%D1%84%D0%BE%D1%82%D0%BE.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19914258",
     contentEn: [],
     contentZh: [],
@@ -4495,7 +4502,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "August 29, 2022",
     dateZh: "2022年8月29日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Faisal_Mosque%2C_Islamabad_III.jpg/500px-Faisal_Mosque%2C_Islamabad_III.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Faisal_Mosque%2C_Islamabad_III.jpg/500px-Faisal_Mosque%2C_Islamabad_III.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19629822",
     contentEn: [],
     contentZh: [],
@@ -4559,7 +4567,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "August 6, 2022",
     dateZh: "2022年8月6日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/J-20_at_CCAS2022_%2820220827103424%29.jpg/500px-J-20_at_CCAS2022_%2820220827103424%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/J-20_at_CCAS2022_%2820220827103424%29.jpg/500px-J-20_at_CCAS2022_%2820220827103424%29.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19344509",
     contentEn: [],
     contentZh: [],
@@ -4591,7 +4600,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "July 31, 2022",
     dateZh: "2022年7月31日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Boeing_C-40C%2C_United_States_-_US_Air_Force_%28USAF%29_JP6161862.jpg?_=20131020025453",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/9/93/Boeing_C-40C%2C_United_States_-_US_Air_Force_%28USAF%29_JP6161862.jpg?_=20131020025453",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19256296",
     contentEn: [],
     contentZh: [],
@@ -4623,7 +4633,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "July 27, 2022",
     dateZh: "2022年7月27日",
-    image: "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/04-01-2023_OCHA_Ukraine.jpg/image1170x530cropped.jpg",
+    image:
+      "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/04-01-2023_OCHA_Ukraine.jpg/image1170x530cropped.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19199517",
     contentEn: [],
     contentZh: [],
@@ -4639,7 +4650,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "July 21, 2022",
     dateZh: "2022年7月21日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Diet_of_Japan_Kokkai_2009.jpg/500px-Diet_of_Japan_Kokkai_2009.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Diet_of_Japan_Kokkai_2009.jpg/500px-Diet_of_Japan_Kokkai_2009.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_19112993",
     contentEn: [],
     contentZh: [],
@@ -4751,7 +4763,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "June 29, 2022",
     dateZh: "2022年6月29日",
-    image: "https://video.cgtn.com/news/2021-12-09/China-livestreams-first-space-class-from-Tiangong-space-station-15QORIuxkgU/video/3c5eb2e2751940ee9841490e99b4e4f7/3c5eb2e2751940ee9841490e99b4e4f7.png",
+    image:
+      "https://video.cgtn.com/news/2021-12-09/China-livestreams-first-space-class-from-Tiangong-space-station-15QORIuxkgU/video/3c5eb2e2751940ee9841490e99b4e4f7/3c5eb2e2751940ee9841490e99b4e4f7.png",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18795300",
     contentEn: [],
     contentZh: [],
@@ -4767,7 +4780,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "June 23, 2022",
     dateZh: "2022年6月23日",
-    image: "https://d.ifengimg.com/w739_h415_q90_webp/x0.ifengimg.com/res/2021/23764AA82CA69CD14136D43A798D623198508CA3_size26_w739_h415.jpg",
+    image:
+      "https://d.ifengimg.com/w739_h415_q90_webp/x0.ifengimg.com/res/2021/23764AA82CA69CD14136D43A798D623198508CA3_size26_w739_h415.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18704256",
     contentEn: [],
     contentZh: [],
@@ -4799,7 +4813,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "June 13, 2022",
     dateZh: "2022年6月13日",
-    image: "https://cdn.sputniknews.cn/img/07e9/0a/14/1067971066_0:236:3071:1964_1920x0_80_0_0_bbfbf6f9425582cd48b67c8cf0687d36.jpg.webp",
+    image:
+      "https://cdn.sputniknews.cn/img/07e9/0a/14/1067971066_0:236:3071:1964_1920x0_80_0_0_bbfbf6f9425582cd48b67c8cf0687d36.jpg.webp",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18104353",
     contentEn: [],
     contentZh: [],
@@ -4815,7 +4830,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "June 10, 2022",
     dateZh: "2022年6月10日",
-    image: "https://www.reuters.com/resizer/v2/ZK4HADL3SRPMXAKIWMQP3EXVAE.jpg?auth=3a64ed85ad4befdbde9bc23db227e36eb3ef943a4b268b21be3221a1ffc82eec&width=960&quality=80",
+    image:
+      "https://www.reuters.com/resizer/v2/ZK4HADL3SRPMXAKIWMQP3EXVAE.jpg?auth=3a64ed85ad4befdbde9bc23db227e36eb3ef943a4b268b21be3221a1ffc82eec&width=960&quality=80",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18513412",
     contentEn: [],
     contentZh: [],
@@ -4847,7 +4863,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 31, 2022",
     dateZh: "2022年5月31日",
-    image: "https://www.reuters.com/resizer/v2/2F5SEG3FQFMXNIMIR342XIICMA.jpg?auth=17f5a9fe1d7da5ba914e7dae84200be88ba7ea8fa2753daf03cf731588e35bd2&width=960&quality=80",
+    image:
+      "https://www.reuters.com/resizer/v2/2F5SEG3FQFMXNIMIR342XIICMA.jpg?auth=17f5a9fe1d7da5ba914e7dae84200be88ba7ea8fa2753daf03cf731588e35bd2&width=960&quality=80",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18355184",
     contentEn: [],
     contentZh: [],
@@ -4879,7 +4896,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 26, 2022",
     dateZh: "2022年5月26日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ec_8_%2826088200676%29.jpg/1280px-Ec_8_%2826088200676%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ec_8_%2826088200676%29.jpg/1280px-Ec_8_%2826088200676%29.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18280397",
     contentEn: [],
     contentZh: [],
@@ -4895,7 +4913,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 25, 2022",
     dateZh: "2022年5月25日",
-    image: "https://assets.weforum.org/article/image/responsive_big_webp_krOn-Uc2QSRBM10f-LW6tzPyZdGbpOhGkNrePPzoiAQ.webp",
+    image:
+      "https://assets.weforum.org/article/image/responsive_big_webp_krOn-Uc2QSRBM10f-LW6tzPyZdGbpOhGkNrePPzoiAQ.webp",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18245230",
     contentEn: [],
     contentZh: [],
@@ -4927,7 +4946,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 16, 2022",
     dateZh: "2022年5月16日",
-    image: "https://media.cnn.com/api/v1/images/stellar/prod/220516165934-lead-brian-todd-live-00030304.png?c=16x9&q=w_1280,c_fill",
+    image:
+      "https://media.cnn.com/api/v1/images/stellar/prod/220516165934-lead-brian-todd-live-00030304.png?c=16x9&q=w_1280,c_fill",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18104353",
     contentEn: [],
     contentZh: [],
@@ -4959,7 +4979,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 12, 2022",
     dateZh: "2022年5月12日",
-    image: "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/c/343596/5cd0e9e-279291679-2600692970068080-3937782972211630882-n--1-.jpg?w=900&q=90&f=webp",
+    image:
+      "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/c/343596/5cd0e9e-279291679-2600692970068080-3937782972211630882-n--1-.jpg?w=900&q=90&f=webp",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_18035642",
     contentEn: [],
     contentZh: [],
@@ -4975,7 +4996,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 8, 2022",
     dateZh: "2022年5月8日",
-    image: "https://ichef.bbci.co.uk/ace/ws/624/amz/worldservice/live/assets/images/2014/04/21/140421140526_baosteel_emotion_624x351_xinhua.jpg.webp",
+    image:
+      "https://ichef.bbci.co.uk/ace/ws/624/amz/worldservice/live/assets/images/2014/04/21/140421140526_baosteel_emotion_624x351_xinhua.jpg.webp",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17973493",
     contentEn: [],
     contentZh: [],
@@ -4991,7 +5013,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 6, 2022",
     dateZh: "2022年5月6日",
-    image: "https://cdn.hk01.com/di/media/images/666409/org/772b6be9e6763ef49c0e0156ad549764.jpg/A5EYZAM_xqK4Fl4M2EFEvHWkUV9qcFNXt4JK7reCSu4?v=w960r16_9",
+    image:
+      "https://cdn.hk01.com/di/media/images/666409/org/772b6be9e6763ef49c0e0156ad549764.jpg/A5EYZAM_xqK4Fl4M2EFEvHWkUV9qcFNXt4JK7reCSu4?v=w960r16_9",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17941010",
     contentEn: [],
     contentZh: [],
@@ -5007,7 +5030,6 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 4, 2022",
     dateZh: "2022年5月4日",
-    image: "https://i.guancha.cn/news/2022/05/04/20220504083253622jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17921326",
     contentEn: [],
     contentZh: [],
@@ -5023,7 +5045,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 2, 2022",
     dateZh: "2022年5月2日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Pfizer_World_Headquarters_Entrance.jpg/3840px-Pfizer_World_Headquarters_Entrance.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Pfizer_World_Headquarters_Entrance.jpg/3840px-Pfizer_World_Headquarters_Entrance.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17899906",
     contentEn: [],
     contentZh: [],
@@ -5055,7 +5078,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "April 21, 2022",
     dateZh: "2022年4月21日",
-    image: "https://nationalsecurityjournal.org/wp-content/uploads/2024/08/Admiral-Kuznetsov-Russian-Aircraft-Carrier-3.jpg",
+    image:
+      "https://nationalsecurityjournal.org/wp-content/uploads/2024/08/Admiral-Kuznetsov-Russian-Aircraft-Carrier-3.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17707672",
     contentEn: [],
     contentZh: [],
@@ -5071,7 +5095,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "April 18, 2022",
     dateZh: "2022年4月18日",
-    image: "https://npr.brightspotcdn.com/dims4/default/d91d81d/2147483647/strip/true/crop/3000x2033+0+0/resize/1760x1192!/format/webp/quality/90/?url=https%3A%2F%2Fmedia.npr.org%2Fassets%2Fimg%2F2022%2F04%2F14%2Fgettyimages-1239961469_custom-843cc6673e787db7b10f558fef0579dac41d23ae.jpg",
+    image:
+      "https://npr.brightspotcdn.com/dims4/default/d91d81d/2147483647/strip/true/crop/3000x2033+0+0/resize/1760x1192!/format/webp/quality/90/?url=https%3A%2F%2Fmedia.npr.org%2Fassets%2Fimg%2F2022%2F04%2F14%2Fgettyimages-1239961469_custom-843cc6673e787db7b10f558fef0579dac41d23ae.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17665241",
     contentEn: [],
     contentZh: [],
@@ -5119,7 +5144,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 29, 2022",
     dateZh: "2022年3月29日",
-    image: "https://www.atlanticcouncil.org/wp-content/uploads/2022/03/Screen-Shot-2022-03-25-at-12.27.05-PM-e1648225672275-1024x765.png",
+    image:
+      "https://www.atlanticcouncil.org/wp-content/uploads/2022/03/Screen-Shot-2022-03-25-at-12.27.05-PM-e1648225672275-1024x765.png",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17341707",
     contentEn: [],
     contentZh: [],
@@ -5151,7 +5177,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 20, 2022",
     dateZh: "2022年3月20日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg/1280px-Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg/1280px-Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17190346",
     contentEn: [],
     contentZh: [],
@@ -5183,7 +5210,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 12, 2022",
     dateZh: "2022年3月12日",
-    image: "https://images.theconversation.com/files/451083/original/file-20220309-18-8vzs23.jpg?ixlib=rb-4.1.0&q=30&auto=format&w=600&h=340&fit=crop&dpr=2",
+    image:
+      "https://images.theconversation.com/files/451083/original/file-20220309-18-8vzs23.jpg?ixlib=rb-4.1.0&q=30&auto=format&w=600&h=340&fit=crop&dpr=2",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17066735",
     contentEn: [],
     contentZh: [],
@@ -5199,7 +5227,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 10, 2022",
     dateZh: "2022年3月10日",
-    image: "https://www.news.cn/world/20250424/14fc3f1625224899bac4ebd8e6409f02/2025042414fc3f1625224899bac4ebd8e6409f02_97906bafe0a44f2e8e75da1112f249d9.JPG",
+    image:
+      "https://www.news.cn/world/20250424/14fc3f1625224899bac4ebd8e6409f02/2025042414fc3f1625224899bac4ebd8e6409f02_97906bafe0a44f2e8e75da1112f249d9.JPG",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17033526",
     contentEn: [],
     contentZh: [],
@@ -5215,7 +5244,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 10, 2022",
     dateZh: "2022年3月10日",
-    image: "https://imageio.forbes.com/specials-images/imageserve/6220734cabb4baf675ddbc12/Battle-map-from-Russia-s-810th-Naval-Infantry-Brigade-by-Ukrainian-forces-/0x0.jpg?width=960&dpr=1.5",
+    image:
+      "https://imageio.forbes.com/specials-images/imageserve/6220734cabb4baf675ddbc12/Battle-map-from-Russia-s-810th-Naval-Infantry-Brigade-by-Ukrainian-forces-/0x0.jpg?width=960&dpr=1.5",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17031540",
     contentEn: [],
     contentZh: [],
@@ -5263,7 +5293,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 2, 2022",
     dateZh: "2022年3月2日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%BB%D1%8F_%D0%9C%D1%96%D0%BD%D1%96%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%BE%D0%B1%D0%BE%D1%80%D0%BE%D0%BD%D0%B8_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_01.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/3/3f/%D0%91%D1%83%D0%B4%D1%96%D0%B2%D0%BB%D1%8F_%D0%9C%D1%96%D0%BD%D1%96%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%BE%D0%B1%D0%BE%D1%80%D0%BE%D0%BD%D0%B8_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_01.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16922712",
     contentEn: [],
     contentZh: [],
@@ -5327,7 +5358,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 27, 2022",
     dateZh: "2022年2月27日",
-    image: "https://media.cnn.com/api/v1/images/stellar/prod/140305102043-nr-coren-rt-anchor-ukraine-statement-00004207.jpg?q=x_139,y_5,h_576,w_1024,c_crop/w_1280",
+    image:
+      "https://media.cnn.com/api/v1/images/stellar/prod/140305102043-nr-coren-rt-anchor-ukraine-statement-00004207.jpg?q=x_139,y_5,h_576,w_1024,c_crop/w_1280",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16877918",
     contentEn: [],
     contentZh: [],
@@ -5343,7 +5375,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 26, 2022",
     dateZh: "2022年2月26日",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/9A35_combat_vehicle_9K35_Strela-10_-_TankBiathlon14part2-37.jpg/1280px-9A35_combat_vehicle_9K35_Strela-10_-_TankBiathlon14part2-37.jpg?_=20160616214435",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/9A35_combat_vehicle_9K35_Strela-10_-_TankBiathlon14part2-37.jpg/1280px-9A35_combat_vehicle_9K35_Strela-10_-_TankBiathlon14part2-37.jpg?_=20160616214435",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16870427",
     contentEn: [],
     contentZh: [],
@@ -5359,7 +5392,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 24, 2022",
     dateZh: "2022年2月24日",
-    image: "https://assets.misbar.com/styles/large_730x415/public/c57d43c4734d1c99c69ea093f65c441f864548e3.jpg.webp?itok=RlKEOchi",
+    image:
+      "https://assets.misbar.com/styles/large_730x415/public/c57d43c4734d1c99c69ea093f65c441f864548e3.jpg.webp?itok=RlKEOchi",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16837193",
     contentEn: [],
     contentZh: [],
@@ -5407,7 +5441,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 18, 2022",
     dateZh: "2022年2月18日",
-    image: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_avif,q_auto:eco,dpr_2/rockcms/2022-02/220208-eileen-gu-mb-0953-8e613e.jpg",
+    image:
+      "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_avif,q_auto:eco,dpr_2/rockcms/2022-02/220208-eileen-gu-mb-0953-8e613e.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16738297",
     contentEn: [],
     contentZh: [],
@@ -5423,7 +5458,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 16, 2022",
     dateZh: "2022年2月16日",
-    image: "https://d.ifengimg.com/w1080_h686_q90_webp/x0.ifengimg.com/res/2022/887FC64620DE0376320C48947D4195E1B415966C_size1146_w1080_h686.png",
+    image:
+      "https://d.ifengimg.com/w1080_h686_q90_webp/x0.ifengimg.com/res/2022/887FC64620DE0376320C48947D4195E1B415966C_size1146_w1080_h686.png",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16705240",
     contentEn: [],
     contentZh: [],
