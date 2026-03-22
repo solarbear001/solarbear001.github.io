@@ -2107,6 +2107,7 @@ export const workArticles: Article[] = [
     contentEn: [],
     contentZh: [],
   },
+  ,
   {
     slug: "fc3-20231221-0",
     type: "work" as const,
@@ -3710,7 +3711,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 4, 2022",
     dateZh: "2022年5月4日",
-    image: "https://i.guancha.cn/news/2022/05/04/20220504083253622jpg",
+    image:
+      "https://preview.redd.it/which-country-is-closest-to-you-in-russia-v0-2hq3orc7op771.jpg?width=1080&crop=smart&auto=webp&s=8767023f8ebfc0021b6211f6b715467a17f9d417",
     contentEn: [],
     contentZh: [],
   },
