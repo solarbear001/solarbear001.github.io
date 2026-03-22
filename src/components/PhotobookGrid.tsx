@@ -260,32 +260,6 @@ const PhotobookGrid = () => {
               );
             })}
 
-            {/* Filler cards for empty weeks */}
-            {fillerCards.map((filler, i) => (
-              <a
-                key={`filler-${i}`}
-                href={filler.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute group cursor-pointer block"
-                style={{
-                  left: filler.col * cellW + GAP / 2,
-                  top: filler.row * cellH + GAP / 2,
-                  width: cellW - GAP,
-                  height: cellH - GAP,
-                }}
-              >
-                <div className="relative w-full h-full overflow-hidden">
-                  <img
-                    src={filler.image}
-                    alt=""
-                    className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </a>
-            ))}
           </motion.div>
         </div>
       </div>
