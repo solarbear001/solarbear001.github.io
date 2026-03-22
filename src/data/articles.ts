@@ -3930,7 +3930,7 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "March 7, 2022",
     dateZh: "2022年3月7日",
-    image: "https://i.guancha.cn/news/mainland/2022/03/07/20220307083641699.jpg",
+    image: "https://m.media-amazon.com/images/I/71lN67mFo5L._AC_SX300_SY300_QL70_ML2_.jpg",
     contentEn: [],
     contentZh: [],
   },
