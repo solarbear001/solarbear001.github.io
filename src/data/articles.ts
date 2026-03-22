@@ -1686,7 +1686,8 @@ export const workArticles: Article[] = [
     descZh: "事实核查调查。",
     dateEn: "June 4, 2024",
     dateZh: "2024年6月4日",
-    image: "https://media.defense.gov/2020/Jun/25/2002321233/600/400/0/200612-N-RU084-1110.JPG",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/US_Navy_060617-N-0490C-010_The_Nimitz-class_aircraft_carrier_USS_Dwight_D._Eisenhower_%28CVN_69%29_conducts_a_turn_in_the_Atlantic_Ocean._Eisenhower_is_underway_conducting_routine_carrier_operations.jpg/500px-thumbnail.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_27607833",
     contentEn: [],
     contentZh: [],
@@ -3722,7 +3723,7 @@ export const workArticles: Article[] = [
     dateEn: "April 18, 2022",
     dateZh: "2022年4月18日",
     image:
-      "https://npr.brightspotcdn.com/dims4/default/d91d81d/2147483647/strip/true/crop/3000x2033+0+0/resize/1760x1192!/format/webp/quality/90/?url=https%3A%2F%2Fmedia.npr.org%2Fassets%2Fimg%2F2022%2F04%2F14%2Fgettyimages-1239961469_custom-843cc6673e787db7b10f558fef0579dac41d23ae.jpg",
+      "https://www.president.gov.ua/storage/j-image-storage/23/75/49/4f83c61d6354a71a54ba1c97771d0ba6_1649874381_extra_large.jpeg",
     contentEn: [],
     contentZh: [],
   },
@@ -5041,8 +5042,6 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "April 18, 2022",
     dateZh: "2022年4月18日",
-    image:
-      "https://npr.brightspotcdn.com/dims4/default/d91d81d/2147483647/strip/true/crop/3000x2033+0+0/resize/1760x1192!/format/webp/quality/90/?url=https%3A%2F%2Fmedia.npr.org%2Fassets%2Fimg%2F2022%2F04%2F14%2Fgettyimages-1239961469_custom-843cc6673e787db7b10f558fef0579dac41d23ae.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_17665241",
     contentEn: [],
     contentZh: [],
