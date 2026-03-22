@@ -233,7 +233,7 @@ const About = () => {
                     {[
                       { en: "Shanghai News Awards × 2", zh: "上海新闻奖 × 2" },
                       { en: "The Silver Dove Award × 2", zh: "银鸽奖 × 3" },
-                      { en: "Excellent Online Rumor-Busting Works in Shanghai", zh:"2025年度上海网络辟谣优秀作品"}
+                      { en: "Excellent Online Rumor-Busting Works in Shanghai", zh: "2025年度上海网络辟谣优秀作品" },
                       { en: "Shanghai March 8th Red Banner Collective", zh: "上海市三八红旗手（集体）" },
                       { en: "Best International Communication Work of The Paper × 3", zh: "澎湃新闻年度最佳国际传播作品奖 ×3" },
                     ].map((award, i) => (
