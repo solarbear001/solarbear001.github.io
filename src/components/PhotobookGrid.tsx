@@ -4,51 +4,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
 
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
-import work5 from "@/assets/work-5.jpg";
-import blogExt1 from "@/assets/blog-ext-1.jpg";
-import blogExt2 from "@/assets/blog-ext-2.jpg";
-import blogExt3 from "@/assets/blog-ext-3.jpg";
-import blogExt4 from "@/assets/blog-ext-4.jpg";
-import blogExt5 from "@/assets/blog-ext-5.jpg";
-import blogExt6 from "@/assets/blog-ext-6.jpg";
-import blogExt7 from "@/assets/blog-ext-7.jpg";
-import blogExt8 from "@/assets/blog-ext-8.jpg";
-import blogExt9 from "@/assets/blog-ext-9.jpg";
-import blogExt10 from "@/assets/blog-ext-10.jpg";
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
-import blog4 from "@/assets/blog-4.jpg";
-import blog5 from "@/assets/blog-5.jpg";
-import blog6 from "@/assets/blog-6.jpg";
-
-const fillerImages = [
-  work1,
-  work2,
-  work3,
-  work4,
-  work5,
-  blogExt1,
-  blogExt2,
-  blogExt3,
-  blogExt4,
-  blogExt5,
-  blogExt6,
-  blogExt7,
-  blogExt8,
-  blogExt9,
-  blogExt10,
-  blog1,
-  blog2,
-  blog3,
-  blog4,
-  blog5,
-  blog6,
-];
 
 function parseDateFromArticle(dateEn: string): Date {
   const d = new Date(dateEn);
