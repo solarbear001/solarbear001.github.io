@@ -235,7 +235,10 @@ const About = () => {
                       { en: "The Silver Dove Award × 2", zh: "银鸽奖 × 3" },
                       { en: "Excellent Online Rumor-Busting Works in Shanghai", zh: "2025年度上海网络辟谣优秀作品" },
                       { en: "Shanghai March 8th Red Banner Collective", zh: "上海市三八红旗手（集体）" },
-                      { en: "Best International Communication Work of The Paper × 3", zh: "澎湃新闻年度最佳国际传播作品奖 ×3" },
+                      {
+                        en: "Best International Communication Work of The Paper × 3",
+                        zh: "澎湃新闻年度最佳国际传播作品奖 ×3",
+                      },
                     ].map((award, i) => (
                       <li
                         key={i}
@@ -249,13 +252,14 @@ const About = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <CollapsibleSection letter="P" label={t("Events", "项目")}>
+                <CollapsibleSection letter="E" label={t("Events", "项目")}>
                   <ul className="space-y-5">
                     {[
-                      "Behind the Design Interview",
-                      "Lovers Magazine Interview",
-                      "Codrops Portfolio Case Study",
-                      "Speaker at Awwwards",
+                      "IFCN Global Fact 10",
+                      "The International Fact-Checking Partner Summit",
+                      "UN News 《侃侃联合国》",
+                      "Media Workshop × Tsinghua",
+                      "Interview: ICRC Head of Strategic Communication, Patricia Ray",
                     ].map((item, i) => (
                       <li
                         key={i}
