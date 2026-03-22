@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
 
-
 function parseDateFromArticle(dateEn: string): Date {
   const d = new Date(dateEn);
   if (!isNaN(d.getTime())) return d;
@@ -31,22 +30,17 @@ const totalDays = daysBetween(START_DATE, END_DATE);
 const totalCols = Math.ceil(totalDays / ROWS);
 
 const themes: { col: number; en: string; zh: string }[] = [
-  { col: 0, en: "Beijing Olympics", zh: "北京冬奥会" },
-  { col: 15, en: "Russia-Ukraine War", zh: "俄乌战争" },
-  { col: 30, en: "Visual Investigation", zh: "视觉调查" },
-  { col: 45, en: "Open Source Intelligence", zh: "开源情报" },
-  { col: 60, en: "Content & Branding", zh: "内容与品牌" },
-  { col: 75, en: "Digital Experience", zh: "数字体验" },
-  { col: 90, en: "The Archive", zh: "档" },
-  { col: 105, en: "The Archive Continues", zh: "案" },
-  { col: 110, en: "The Archive Continues", zh: "延" },
-  { col: 135, en: "The Archive Continues", zh: "续" },
-  { col: 150, en: "The Archive Continues", zh: "档" },
-  { col: 180, en: "The Archive Continues", zh: "延续" },
-  { col: 195, en: "The Archive Continues", zh: "延续" },
-  { col: 210, en: "The Archive Continues", zh: "案延续" },
+  { col: 0, en: "Beijing Winter Olympics", zh: "北京冬奥会" },
+  { col: 10, en: "Russia-Ukraine War", zh: "俄乌战争" },
+  { col: 20, en: "COVID-19 Pandemic", zh: "新冠疫情" },
+  { col: 45, en: "Qatar World Cup", zh: "卡塔尔世界杯" },
+  { col: 70, en: "Israeli-Palestinian Conflict", zh: "巴以冲突" },
+  { col: 90, en: "Paris Olympics", zh: "巴黎奥运会" },
+  { col: 120, en: "US Presidential Election", zh: "美国大选" },
+  { col: 150, en: "India-Pakistan Conflict", zh: "印巴冲突" },
+  { col: 180, en: "Iran-Israel 12-Day War", zh: "伊以十二日战争" },
+  { col: 210, en: "US-Israel Attacks on Iran ", zh: "美以袭击伊朗" },
 ];
-
 
 const PhotobookGrid = () => {
   const { t } = useLanguage();
@@ -91,7 +85,6 @@ const PhotobookGrid = () => {
       return { article, col, row };
     });
   }, []);
-
 
   const monthLabels = useMemo(() => {
     const labels: { col: number; label: string; isJan: boolean }[] = [];
@@ -259,7 +252,6 @@ const PhotobookGrid = () => {
                 </CardWrapper>
               );
             })}
-
           </motion.div>
         </div>
       </div>
