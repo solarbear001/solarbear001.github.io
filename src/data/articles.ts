@@ -2107,7 +2107,6 @@ export const workArticles: Article[] = [
     contentEn: [],
     contentZh: [],
   },
-  ,
   {
     slug: "fc3-20231221-0",
     type: "work" as const,

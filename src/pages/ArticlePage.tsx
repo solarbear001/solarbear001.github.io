@@ -9,6 +9,11 @@ const ArticlePage = () => {
   const { t } = useLanguage();
   const article = slug ? getArticleBySlug(slug) : undefined;
 
+  if (article?.externalLink) {
+    window.location.href = article.externalLink;
+    return null;
+  }
+
   if (!article) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
