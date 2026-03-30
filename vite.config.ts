@@ -18,5 +18,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/'
+  base: 'https://solarbear001.github.io/zhengshujing/'
 }));
